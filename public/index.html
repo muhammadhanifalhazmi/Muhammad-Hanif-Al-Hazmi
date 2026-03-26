@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hanif Al Hazmi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/muhammadhanifalhazmi" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.tiktok.com/@neeeeep" title="Tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/muhammadhanif_al?igsh=MTRpeTRsMGdvb213cQ==" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/628819485228?text=Hi%20Qiscus" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#about">About</a></li>-->
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>-->
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Hello Guys! <br> Welcome to My Page</h1>
+                        <p>I am a graduate of the applied informatics engineering bachelor degree at the Electronic Engineering Polytechnic Institute of Surabaya (PENS). My expertise lies in Website Development, Mobile Apps Development, and Internet of Things Eco-system. </p>
+                        <div class="hero-stats">
+                            <a href="https://wa.me/628819485228?text=Halo%20Hanif,%20saya%20ingin%20berdiskusi." target="_blank" class="wa-button" id="waButton">
+                                <i class="fab fa-whatsapp" style="width: 20px;"></i> Let's Colaboration With Me
+                            </a>
+                        </div>
+                    </div>
+                </div><br><br><br>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="images/profil.jpg" alt="Muhammad Hanif Al Hazmi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p>Collection of my professional projects and work samples.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" onclick="openModal('portfolio1')">
+                    <div class="portfolio-image">
+                        <img src="images/masbro.jpg" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>MasBro Canteen</h3>
+                        <p>Online Food Delivery Paltform at Canteen PENS</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('portfolio2')">
+                    <div class="portfolio-image">
+                        <img src="images/umkm.png" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>UMKM Web Store</h3>
+                        <p>Website for UMKM to showcase and sell their products</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('portfolio3')">
+                    <div class="portfolio-image">
+                        <img src="images/siram.png" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Business intelligence platform with predictive analytics</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('portfolio4')">
+                    <div class="portfolio-image">
+                        <img src="images/disign.png" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Business intelligence platform with predictive analytics</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('portfolio5')">
+                    <div class="portfolio-image">
+                        <img src="images/greencast.png" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Business intelligence platform with predictive analytics</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('portfolio6')">
+                    <div class="portfolio-image">
+                        <img src="images/biisa.jpg" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Business intelligence platform with predictive analytics</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('portfolio7')">
+                    <div class="portfolio-image">
+                        <img src="images/buildiv.png" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Business intelligence platform with predictive analytics</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="portfolio-item" onclick="openModal('portfolio8')">
+                    <div class="portfolio-image">
+                        <img src="images/excelsion.png" alt="">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Business intelligence platform with predictive analytics</p>
+                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Portfolio Modals -->
+    <div id="portfolio1Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Online Food Delivery Platform</h2>
+                <button class="modal-close" onclick="closeModal('portfolio1')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Mobile App</p>
+                <img src="images/masbro1.jpg" alt="Web App">
+                <p>Web landing page</p>
+                <img src="images/masbro2.jpg" alt="Web App">
+                <h3>Project Overview</h3>
+                <p>I served as Project Manager for this project. The platform consists of a Web Landing Page and Mobile App. Users are divided into several categories, including buyers and sellers.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Displaying the food and beverage menu in the cafeteria <br>
+                    • Order food and beverages directly from the system<br>
+                    • Performing payment gateway for purchases from users<br>
+                    • Delivery of orders to the user's location
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Flutter</span>
+                    <span class="tech-badge">Laravel</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">Agile Method</span>
+                    <span class="tech-badge">JIRA</span>
+                </div><br>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio2Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Web Showcase UMKM Products</h2>
+                <button class="modal-close" onclick="closeModal('portfolio2')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>UMKM Products</p>
+                <img src="images/umkm1.jpg" alt="Mobile App">
+                <br><br><br>
+                <p>Easy Order - Direct to WhatsApp</p>
+                <img src="images/umkm2.jpg" alt="Mobile App">
+                <h3>Project Overview</h3>
+                <p>This project was my main task during my internship at Gamelab Indonesia. Its MVP is that it can help increase sales of UMKM partnership products.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Displaying UMKM products<br>
+                    • Introduction to UMKM products<br>
+                    • Connecting potential buyers and sellers directly<br>
+                    • Creating content to support product sales
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Bootstrap</span>
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">Javascript</span>
+                </div><br>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio3Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Data Analytics Dashboard</h2>
+                <button class="modal-close" onclick="closeModal('portfolio3')">&times;</button>
+            </div>
+            <div class="modal-body">
+                 <p>Dashsboard & Diagram System</p>
+                <img src="images/siram1.jpg" alt="Mobile App">
+                <br><br><br>
+                <p>Hardware & Realtime Database</p>
+                <img src="images/siram2.jpg" alt="Mobile App">
+                <h3>Project Overview</h3>
+                <p>An advanced business intelligence platform that transforms raw data into actionable insights. Features predictive analytics, customizable reports, and real-time monitoring capabilities.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Predictive Analytics Engine<br>
+                    • Custom Report Generation<br>
+                    • Real-time Data Monitoring<br>
+                    • Data Visualization Tools<br>
+                    • Export & Sharing Options
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">D3.js</span>
+                </div><br>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio4Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Data Analytics Dashboard</h2>
+                <button class="modal-close" onclick="closeModal('portfolio4')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Dashsboard & Diagram System</p>
+                <img src="images/disign1.jpg" alt="Mobile App">
+                <br><br><br>
+                <p>Hardware & Realtime Database</p>
+                <img src="images/disign2.png" alt="Mobile App">
+                <h3>Project Overview</h3>
+                <p>An advanced business intelligence platform that transforms raw data into actionable insights. Features predictive analytics, customizable reports, and real-time monitoring capabilities.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Predictive Analytics Engine<br>
+                    • Custom Report Generation<br>
+                    • Real-time Data Monitoring<br>
+                    • Data Visualization Tools<br>
+                    • Export & Sharing Options
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">D3.js</span>
+                </div>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio5Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Data Analytics Dashboard</h2>
+                <button class="modal-close" onclick="closeModal('portfolio5')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Dashsboard & Diagram System</p>
+                <img src="images/greencast1.png" alt="Mobile App">
+                <br><br><br>
+                <p>Hardware & Realtime Database</p>
+                <img src="images/greencast2.png" alt="Mobile App">
+                <h3>Project Overview</h3>
+                <p>An advanced business intelligence platform that transforms raw data into actionable insights. Features predictive analytics, customizable reports, and real-time monitoring capabilities.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Predictive Analytics Engine<br>
+                    • Custom Report Generation<br>
+                    • Real-time Data Monitoring<br>
+                    • Data Visualization Tools<br>
+                    • Export & Sharing Options
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">D3.js</span>
+                </div>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio6Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Data Analytics Dashboard</h2>
+                <button class="modal-close" onclick="closeModal('portfolio6')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Dashsboard & Diagram System</p>
+                <img src="images/biisa1.jpg" alt="Mobile App">
+                <br><br><br>
+                <p>Hardware & Realtime Database</p>
+                <img src="images/biisa2.jpg" alt="Mobile App">
+                <h3>Project Overview</h3>
+                <p>An advanced business intelligence platform that transforms raw data into actionable insights. Features predictive analytics, customizable reports, and real-time monitoring capabilities.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Predictive Analytics Engine<br>
+                    • Custom Report Generation<br>
+                    • Real-time Data Monitoring<br>
+                    • Data Visualization Tools<br>
+                    • Export & Sharing Options
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">D3.js</span>
+                </div>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio7Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Data Analytics Dashboard</h2>
+                <button class="modal-close" onclick="closeModal('portfolio7')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Dashsboard & Diagram System</p>
+                <img src="images/buildiv1.jpg" alt="Mobile App">
+                <br><br><br>
+                <p>Hardware & Realtime Database</p>
+                <img src="images/buildiv2.jpg" alt="Mobile App">
+                <h3>Project Overview</h3>
+                <p>An advanced business intelligence platform that transforms raw data into actionable insights. Features predictive analytics, customizable reports, and real-time monitoring capabilities.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Predictive Analytics Engine<br>
+                    • Custom Report Generation<br>
+                    • Real-time Data Monitoring<br>
+                    • Data Visualization Tools<br>
+                    • Export & Sharing Options
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">D3.js</span>
+                </div>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio8Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Data Analytics Dashboard</h2>
+                <button class="modal-close" onclick="closeModal('portfolio8')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Dashsboard & Diagram System</p>
+                <img src="images/excelsion1.jpg" alt="Mobile App">
+                <br><br><br>
+                <p>Hardware & Realtime Database</p>
+                <img src="images/excelsion2.jpg" alt="Mobile App">
+                <br><br><br>
+                <p>Hardware & Realtime Database</p>
+                <img src="images/excelsion3.jpg" alt="Mobile App">
+                <h3>Project Overview</h3>
+                <p>An advanced business intelligence platform that transforms raw data into actionable insights. Features predictive analytics, customizable reports, and real-time monitoring capabilities.</p>
+                
+                <h3>Key Features</h3>
+                <p>
+                    • Predictive Analytics Engine<br>
+                    • Custom Report Generation<br>
+                    • Real-time Data Monitoring<br>
+                    • Data Visualization Tools<br>
+                    • Export & Sharing Options
+                </p>
+
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">D3.js</span>
+                </div>
+                <div class="link-project">
+                    <h3>Link to Project</h3><br>
+                    <a href="https://google.com" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+                <p>My educational background is in Applied Informatics Engineering.</p>
+            </div>
+            <div class="container">
+                <div class="main-timeline">
+                    <div class="timeline">
+                        <div class="icon"></div>
+                        <div class="date-content">
+                            <div class="date-outer">
+                                <span class="date">
+                                    <span class="month">2024 - 2025</span>
+                                    <span class="year">1 Year</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h5 class="title">Politeknik Elektronika Negeri Surabaya</h5>
+                            <h6>Bachelor's Degree in Informatics Engineering - (S.Tr.Kom.)</h6>
+                            <p class="description">
+                                GPA : 3.81/4.00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="icon"></div>
+                        <div class="date-content">
+                            <div class="date-outer">
+                                <span class="date">
+                                    <span class="month">2021 - 2024</span>
+                                    <span class="year">3 Years</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <h5 class="title">Politeknik Elektronika Negeri Surabaya</h5>
+                            <h6>Associate's Degree in Informatics Engineering - (A.Md.Kom.)</h6>
+                            <p class="description">
+                                GPA : 3.41/4.00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-card">
+            <h3>Contact Me</h3>
+            <p class="contact-desc">
+                I usually respond faster on WhatsApp.  
+                Click the button below to start a conversation.
+            </p>
+
+            <a 
+                href="https://wa.me/628819485228?text=Halo%20Hanif,%20saya%20ingin%20berdiskusi."
+                target="_blank"
+                class="wa-button"
+                id="waButton"
+            >
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+
+            <span class="wa-number">
+                or send letter on my email: <strong>mehmedhanifalhazmi@gmail.com</strong>
+            </span>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="social-links-bottom">
+                <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/muhammadhanifalhazmi" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.tiktok.com/@neeeeep" title="Tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/muhammadhanif_al?igsh=MTRpeTRsMGdvb213cQ==" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/628819485228?text=Hi%20Qiscus" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+                <p>&copy; 2025 Muhammad Hanif Al Hazmi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+     <script>
+        let currentCarouselIndex = 0;
+
+        function changeCarousel(n) {
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.carousel-dot');
+            currentCarouselIndex += n;
+
+            if (currentCarouselIndex >= items.length) {
+                currentCarouselIndex = 0;
+            } else if (currentCarouselIndex < 0) {
+                currentCarouselIndex = items.length - 1;
+            }
+
+            items.forEach(item => item.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            items[currentCarouselIndex].classList.add('active');
+            dots[currentCarouselIndex].classList.add('active');
+        }
+
+        function currentCarousel(n) {
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            items.forEach(item => item.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentCarouselIndex = n;
+            items[currentCarouselIndex].classList.add('active');
+            dots[currentCarouselIndex].classList.add('active');
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId + 'Modal');
+            if (modal) {
+                modal.classList.add('show');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId + 'Modal');
+            if (modal) {
+                modal.classList.remove('show');
+            }
+        }
+
+        // Close modal ketika klik di luar modal
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
+        }
+
+        async function sendEmail(event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+
+            const messageDiv = document.getElementById('formMessage');
+
+            try {
+                const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    messageDiv.textContent = 'Pesan berhasil dikirim ke email Anda!';
+                    messageDiv.className = 'form-message success';
+                    document.getElementById('contactForm').reset();
+                    
+                    // Reset message setelah 5 detik
+                    setTimeout(() => {
+                        messageDiv.className = 'form-message';
+                    }, 5000);
+                } else {
+                    throw new Error('Gagal mengirim pesan');
+                }
+            } catch (error) {
+                messageDiv.textContent = 'Gagal mengirim pesan. Silakan coba lagi.';
+                messageDiv.className = 'form-message error';
+            }
+        }
+
+        // Smooth scroll untuk navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+        </script>
+
+    <!-- Bootstrap JS (WAJIB DI LUAR SCRIPT) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+</body>
+</html>
