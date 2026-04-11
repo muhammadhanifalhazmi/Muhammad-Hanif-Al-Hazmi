@@ -3,11 +3,7 @@
 // =============================================
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
+    nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
 // =============================================
@@ -18,107 +14,173 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             e.preventDefault();
-            const offset = 80;
-            const top = target.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top, behavior: 'smooth' });
-
-            // Close mobile menu if open
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
             const navCollapse = document.getElementById('navbarNav');
             if (navCollapse && navCollapse.classList.contains('show')) {
-                const toggler = document.querySelector('.navbar-toggler');
-                toggler && toggler.click();
+                document.querySelector('.navbar-toggler')?.click();
             }
         }
     });
 });
 
 // =============================================
-// MODAL FUNCTIONS
+// MODAL
 // =============================================
-function openModal(modalId) {
-    const modal = document.getElementById(modalId + 'Modal');
-    if (modal) {
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
+function openModal(id) {
+    const m = document.getElementById(id + 'Modal');
+    if (m) { m.classList.add('show'); document.body.style.overflow = 'hidden'; }
 }
-
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId + 'Modal');
-    if (modal) {
-        modal.classList.remove('show');
-        document.body.style.overflow = '';
-    }
+function closeModal(id) {
+    const m = document.getElementById(id + 'Modal');
+    if (m) { m.classList.remove('show'); document.body.style.overflow = ''; }
 }
-
-// Close modal on backdrop click
-window.addEventListener('click', function(e) {
+window.addEventListener('click', e => {
     if (e.target.classList.contains('modal')) {
         e.target.classList.remove('show');
         document.body.style.overflow = '';
     }
 });
-
-// Close modal on Escape key
-window.addEventListener('keydown', function(e) {
+window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-        document.querySelectorAll('.modal.show').forEach(modal => {
-            modal.classList.remove('show');
-        });
+        document.querySelectorAll('.modal.show').forEach(m => m.classList.remove('show'));
         document.body.style.overflow = '';
+        closeLightbox();
     }
 });
 
 // =============================================
-// SCROLL REVEAL ANIMATION
+// SCROLL REVEAL
 // =============================================
-const revealObserver = new IntersectionObserver((entries) => {
+const revealObs = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.classList.add('visible');
-            }, i * 100);
-            revealObserver.unobserve(entry.target);
+            setTimeout(() => entry.target.classList.add('visible'), i * 80);
+            revealObs.unobserve(entry.target);
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-document.querySelectorAll('.edu-item, .pcard, .skill-group, .cert-img').forEach(el => {
-    el.classList.add('reveal');
-    revealObserver.observe(el);
+document.querySelectorAll('.reveal, .edu-item, .pcard, .skill-group, .exp-item').forEach(el => {
+    if (!el.classList.contains('reveal')) el.classList.add('reveal');
+    revealObs.observe(el);
 });
 
 // =============================================
 // SKILL BAR ANIMATION
 // =============================================
-const skillObserver = new IntersectionObserver((entries) => {
+const skillObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.skill-fill').forEach(fill => {
-                const w = fill.getAttribute('data-w');
-                fill.style.width = w + '%';
+            entry.target.querySelectorAll('.skill-fill').forEach(f => {
+                f.style.width = f.getAttribute('data-w') + '%';
             });
-            skillObserver.unobserve(entry.target);
+            skillObs.unobserve(entry.target);
         }
     });
 }, { threshold: 0.3 });
-
-document.querySelectorAll('.skills-wrap').forEach(el => skillObserver.observe(el));
+document.querySelectorAll('.skills-wrap').forEach(el => skillObs.observe(el));
 
 // =============================================
-// ACTIVE NAV LINK ON SCROLL
+// ACTIVE NAV ON SCROLL
 // =============================================
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
-
-const sectionObserver = new IntersectionObserver((entries) => {
+const sectionObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-            if (active) active.classList.add('active');
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector(`.nav-link[href="#${entry.target.id}"]`)?.classList.add('active');
         }
     });
 }, { threshold: 0.4 });
+sections.forEach(s => sectionObs.observe(s));
 
-sections.forEach(sec => sectionObserver.observe(sec));
+// =============================================
+// GALLERY FILTER + LIGHTBOX
+// =============================================
+const gfilters = document.querySelectorAll('.gfilter');
+const gcards = document.querySelectorAll('.gcard');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+
+let visibleCards = [];
+let lightboxIndex = 0;
+
+// Filter
+gfilters.forEach(btn => {
+    btn.addEventListener('click', () => {
+        gfilters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        gcards.forEach(card => {
+            const cat = card.getAttribute('data-cat');
+            if (filter === 'all' || cat === filter) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        updateVisibleCards();
+    });
+});
+
+function updateVisibleCards() {
+    visibleCards = [...gcards].filter(c => !c.classList.contains('hidden') && !c.classList.contains('img-error'));
+}
+updateVisibleCards();
+
+// Open lightbox on card click
+gcards.forEach(card => {
+    card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        const caption = card.querySelector('.gcard-caption')?.textContent || '';
+        if (!img || card.classList.contains('img-error')) return;
+        lightboxIndex = visibleCards.indexOf(card);
+        showLightboxImage(card);
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function showLightboxImage(card) {
+    const img = card.querySelector('img');
+    const caption = card.querySelector('.gcard-caption')?.textContent || '';
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = caption;
+}
+
+function closeLightbox() {
+    if (lightbox) {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+}
+
+document.getElementById('lightboxClose')?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+document.getElementById('lightboxPrev')?.addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex - 1 + visibleCards.length) % visibleCards.length;
+    showLightboxImage(visibleCards[lightboxIndex]);
+});
+document.getElementById('lightboxNext')?.addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex + 1) % visibleCards.length;
+    showLightboxImage(visibleCards[lightboxIndex]);
+});
+
+// Swipe support for lightbox
+let touchStartX = 0;
+lightbox?.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+lightbox?.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+        if (dx < 0) {
+            lightboxIndex = (lightboxIndex + 1) % visibleCards.length;
+        } else {
+            lightboxIndex = (lightboxIndex - 1 + visibleCards.length) % visibleCards.length;
+        }
+        showLightboxImage(visibleCards[lightboxIndex]);
+    }
+});

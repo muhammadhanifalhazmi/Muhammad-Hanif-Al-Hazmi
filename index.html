@@ -14,9 +14,6 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#home">
-                <span class="brand-dot"></span>hanif.dev
-            </a>
             <div class="social-links d-none d-lg-flex">
                 <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/muhammadhanifalhazmi" title="GitHub"><i class="fab fa-github"></i></a>
@@ -34,10 +31,11 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#activity">Activity</a></li>
                     <li class="nav-item"><a class="nav-link nav-cta" href="#contact">Contact</a></li>
                 </ul>
-                <!-- Mobile social links -->
                 <div class="social-links d-flex d-lg-none mt-3">
                     <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/muhammadhanifalhazmi" title="GitHub"><i class="fab fa-github"></i></a>
@@ -48,7 +46,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-bg-grid"></div>
         <div class="container">
@@ -80,20 +78,11 @@
                             </a>
                         </div>
                         <div class="hero-stats">
-                            <div class="hstat">
-                                <span class="hstat-num">8+</span>
-                                <span class="hstat-lbl">Projects</span>
-                            </div>
+                            <div class="hstat"><span class="hstat-num">8+</span><span class="hstat-lbl">Projects</span></div>
                             <div class="hstat-div"></div>
-                            <div class="hstat">
-                                <span class="hstat-num">3.81</span>
-                                <span class="hstat-lbl">GPA</span>
-                            </div>
+                            <div class="hstat"><span class="hstat-num">3.81</span><span class="hstat-lbl">GPA</span></div>
                             <div class="hstat-div"></div>
-                            <div class="hstat">
-                                <span class="hstat-num">2</span>
-                                <span class="hstat-lbl">HKI Cert</span>
-                            </div>
+                            <div class="hstat"><span class="hstat-num">2</span><span class="hstat-lbl">HKI Cert</span></div>
                         </div>
                     </div>
                 </div>
@@ -101,6 +90,9 @@
                     <div class="hero-photo-wrap">
                         <div class="hero-photo-ring"></div>
                         <img src="images/profil.jpg" alt="Muhammad Hanif Al Hazmi" class="hero-photo">
+                        <div class="hero-photo-card card-webdev">
+                            <i class="fas fa-code"></i> Web Developer
+                        </div>
                         <div class="hero-photo-card card-flutter">
                             <i class="fas fa-mobile-alt"></i> Flutter Dev
                         </div>
@@ -113,7 +105,7 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio -->
     <section class="portfolio section-pad" id="portfolio">
         <div class="container">
             <div class="section-header">
@@ -122,156 +114,99 @@
                 <p class="section-sub">A collection of projects spanning mobile apps, web platforms, and IoT systems.</p>
             </div>
             <div class="portfolio-grid">
-
                 <div class="pcard" onclick="openModal('portfolio1')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#FDE68A,#F59E0B);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FDE68A,#F59E0B)">
                         <img src="images/masbro.jpg" alt="MasBro Canteen" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">Flutter</span>
-                            <span class="ptag">Laravel</span>
-                            <span class="ptag">MySQL</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">Laravel</span><span class="ptag">MySQL</span></div>
                         <h3 class="pcard-title">MasBro Canteen</h3>
                         <p class="pcard-desc">Online food delivery platform at Canteen PENS — mobile app + web landing page.</p>
                     </div>
                 </div>
-
                 <div class="pcard" onclick="openModal('portfolio2')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#A7F3D0,#059669);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#A7F3D0,#059669)">
                         <img src="images/umkm.png" alt="UMKM Web Store" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">HTML</span>
-                            <span class="ptag">CSS</span>
-                            <span class="ptag">Bootstrap</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">Bootstrap</span></div>
                         <h3 class="pcard-title">UMKM Web Store</h3>
                         <p class="pcard-desc">Website for UMKM partners to showcase products and connect buyers via WhatsApp.</p>
                     </div>
                 </div>
-
                 <div class="pcard" onclick="openModal('portfolio3')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#BAE6FD,#0284C7);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#BAE6FD,#0284C7)">
                         <img src="images/siram.png" alt="IoT Melon Garden" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">Flutter</span>
-                            <span class="ptag">ESP32</span>
-                            <span class="ptag">Firebase</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">ESP32</span><span class="ptag">Firebase</span></div>
                         <h3 class="pcard-title">IoT Smart Melon Garden</h3>
                         <p class="pcard-desc">Smart IoT system for melon farming — real-time monitoring, auto-irrigation, HKI certified.</p>
                     </div>
                 </div>
-
                 <div class="pcard" onclick="openModal('portfolio4')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#FECACA,#DC2626);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FECACA,#DC2626)">
                         <img src="images/disign.png" alt="DiSign" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">Flutter</span>
-                            <span class="ptag">React</span>
-                            <span class="ptag">Cryptography</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">React</span><span class="ptag">Cryptography</span></div>
                         <h3 class="pcard-title">DiSign — Digital Signature</h3>
                         <p class="pcard-desc">Secure digital signature system with cryptographic tech, web admin panel + mobile app.</p>
                     </div>
                 </div>
-
                 <div class="pcard" onclick="openModal('portfolio5')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#D1FAE5,#065F46);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#D1FAE5,#065F46)">
                         <img src="images/greencast.png" alt="GreenCast IoT" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">Flutter</span>
-                            <span class="ptag">ESP32</span>
-                            <span class="ptag">Computer Vision</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">ESP32</span><span class="ptag">CV</span></div>
                         <h3 class="pcard-title">GreenCast — Mushroom IoT</h3>
                         <p class="pcard-desc">Smart oyster mushroom farm system with CV-based age detection and weather station.</p>
                     </div>
                 </div>
-
                 <div class="pcard" onclick="openModal('portfolio6')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#E0E7FF,#4338CA);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#E0E7FF,#4338CA)">
                         <img src="images/biisa.jpg" alt="BIISA" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">HTML</span>
-                            <span class="ptag">CSS</span>
-                            <span class="ptag">JavaScript</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span></div>
                         <h3 class="pcard-title">BIISA — Sign Language</h3>
                         <p class="pcard-desc">Interactive learning website for Indonesian & international sign language.</p>
                     </div>
                 </div>
-
                 <div class="pcard" onclick="openModal('portfolio7')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#FEF3C7,#B45309);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FEF3C7,#B45309)">
                         <img src="images/buildiv.png" alt="Buildiv" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">HTML</span>
-                            <span class="ptag">Bootstrap</span>
-                            <span class="ptag">SEO</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">Bootstrap</span><span class="ptag">SEO</span></div>
                         <h3 class="pcard-title">Buildiv — Tech Startup</h3>
                         <p class="pcard-desc">Modern website for a technology startup showcasing services and solutions.</p>
                     </div>
                 </div>
-
                 <div class="pcard" onclick="openModal('portfolio8')">
-                    <div class="pcard-thumb" style="background: linear-gradient(135deg,#FCE7F3,#9D174D);">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FCE7F3,#9D174D)">
                         <img src="images/excelsion.png" alt="Excelsion" onerror="this.style.display='none'">
-                        <div class="pcard-overlay">
-                            <span>View Details <i class="fas fa-arrow-right"></i></span>
-                        </div>
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                     <div class="pcard-body">
-                        <div class="pcard-tags">
-                            <span class="ptag">HTML</span>
-                            <span class="ptag">Bootstrap</span>
-                            <span class="ptag">SEO</span>
-                        </div>
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">Bootstrap</span><span class="ptag">SEO</span></div>
                         <h3 class="pcard-title">Excelsion — EdTech</h3>
                         <p class="pcard-desc">Modern website for an education startup providing online learning resources.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section class="skills-section section-pad" id="skills">
         <div class="container">
             <div class="section-header">
@@ -283,59 +218,134 @@
                 <div class="skill-group">
                     <h4 class="skill-group-title"><i class="fas fa-mobile-alt"></i> Mobile Development</h4>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>Flutter / Dart</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>Firebase</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-                        </div>
+                        <div class="skill-item"><div class="skill-meta"><span>Flutter / Dart</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>Firebase</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
                     </div>
                 </div>
                 <div class="skill-group">
                     <h4 class="skill-group-title"><i class="fas fa-globe"></i> Web Development</h4>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>Laravel / PHP</span><span>75%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>React / JavaScript</span><span>70%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>HTML / CSS / Bootstrap</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
-                        </div>
+                        <div class="skill-item"><div class="skill-meta"><span>Laravel / PHP</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>React / JavaScript</span><span>70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>HTML / CSS / Bootstrap</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
                     </div>
                 </div>
                 <div class="skill-group">
                     <h4 class="skill-group-title"><i class="fas fa-microchip"></i> IoT & Embedded</h4>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>ESP32 / C++</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>Sensor Integration</span><span>78%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
-                        </div>
+                        <div class="skill-item"><div class="skill-meta"><span>ESP32 / C++</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>Sensor Integration</span><span>78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div></div>
                     </div>
                 </div>
                 <div class="skill-group">
                     <h4 class="skill-group-title"><i class="fas fa-database"></i> Database & Tools</h4>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>MySQL</span><span>75%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>MySQL</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>JIRA / Agile</span><span>72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         EXPERIENCE SECTION
+         ============================================= -->
+    <section class="experience section-pad" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Career</span>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-sub">Professional journey and hands-on experience in the field.</p>
+            </div>
+            <div class="exp-list">
+
+                <!-- ===================================================
+                     TEMPLATE EXPERIENCE ITEM
+                     Duplikat blok ini untuk menambah pengalaman baru.
+                     Hapus komentar <!-- dan --> di bawah untuk mengaktifkan.
+                     =================================================== -->
+
+                <!-- EXPERIENCE 1 — GAMELAB -->
+                <div class="exp-item reveal">
+                    <div class="exp-left">
+                        <div class="exp-logo-wrap">
+                            <img src="images/logo-gamelab.png" alt="Gamelab" class="exp-logo" onerror="this.style.display='none'">
+                            <div class="exp-logo-fallback">GL</div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-meta"><span>JIRA / Agile</span><span>72%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-w="72"></div></div>
+                        <div class="exp-vline"></div>
+                    </div>
+                    <div class="exp-right">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Front-End Web Developer Intern</h3>
+                                <p class="exp-company">Gamelab Indonesia</p>
+                            </div>
+                            <div class="exp-period-wrap">
+                                <span class="exp-period">2023</span>
+                                <span class="exp-type">Internship</span>
+                            </div>
+                        </div>
+                        <p class="exp-desc">
+                            Developed and maintained front-end web solutions for UMKM partner products. Worked on transforming client requirements into clean, responsive web interfaces with hands-on experience in full development workflow.
+                        </p>
+                        <ul class="exp-points">
+                            <li>Built responsive web store for UMKM Al-Amiri Mushroom Garden</li>
+                            <li>Developed UI components using HTML, CSS, Bootstrap, and JavaScript</li>
+                            <li>Collaborated with team using agile workflow</li>
+                            <li>Produced content to support product marketing and SEO</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="etag">HTML/CSS</span>
+                            <span class="etag">Bootstrap</span>
+                            <span class="etag">JavaScript</span>
+                            <span class="etag">Figma</span>
+                        </div>
+                        <div class="exp-photos">
+                            <div class="exp-photo-item">
+                                <img src="images/gamelab.jpg" alt="Gamelab Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <!-- Tambah foto lagi: <div class="exp-photo-item"><img src="images/foto2.jpg" alt="..."></div> -->
                         </div>
                     </div>
                 </div>
+
+                <!-- EXPERIENCE 2 — Isi data kamu di sini -->
+                <!--
+                <div class="exp-item reveal">
+                    <div class="exp-left">
+                        <div class="exp-logo-wrap">
+                            <img src="images/logo-perusahaan.png" alt="Nama" class="exp-logo" onerror="this.style.display='none'">
+                            <div class="exp-logo-fallback">AB</div>
+                        </div>
+                        <div class="exp-vline"></div>
+                    </div>
+                    <div class="exp-right">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-role">Nama Posisi</h3>
+                                <p class="exp-company">Nama Perusahaan</p>
+                            </div>
+                            <div class="exp-period-wrap">
+                                <span class="exp-period">2022 - 2023</span>
+                                <span class="exp-type">Freelance</span>
+                            </div>
+                        </div>
+                        <p class="exp-desc">Deskripsi singkat pengalaman kamu.</p>
+                        <ul class="exp-points">
+                            <li>Pencapaian atau tugas 1</li>
+                            <li>Pencapaian atau tugas 2</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="etag">Skill 1</span>
+                        </div>
+                        <div class="exp-photos">
+                            <div class="exp-photo-item"><img src="images/foto-kegiatan.jpg" alt="Activity"></div>
+                        </div>
+                    </div>
+                </div>
+                -->
+
             </div>
         </div>
     </section>
@@ -350,22 +360,20 @@
             </div>
             <div class="edu-timeline">
                 <div class="edu-item reveal">
-                    <div class="edu-icon">S1</div>
-                    <div class="edu-connector"></div>
+                    <div class="edu-icon">D4</div>
                     <div class="edu-card">
                         <div class="edu-period">2024 — 2025</div>
                         <h3 class="edu-school">Politeknik Elektronika Negeri Surabaya</h3>
-                        <p class="edu-degree">Bachelor's Degree — Applied Informatics Engineering <span class="edu-abbr">(S.Tr.Kom.)</span></p>
+                        <p class="edu-degree">Bachelor's Degree (D4) — Applied Informatics Engineering <span class="edu-abbr">(S.Tr.Kom.)</span></p>
                         <div class="edu-gpa"><i class="fas fa-star"></i> GPA 3.81 / 4.00</div>
                     </div>
                 </div>
                 <div class="edu-item reveal">
                     <div class="edu-icon">D3</div>
-                    <div class="edu-connector"></div>
                     <div class="edu-card">
                         <div class="edu-period">2021 — 2024</div>
                         <h3 class="edu-school">Politeknik Elektronika Negeri Surabaya</h3>
-                        <p class="edu-degree">Associate's Degree — Applied Informatics Engineering <span class="edu-abbr">(A.Md.Kom.)</span></p>
+                        <p class="edu-degree">Associate's Degree (D3) — Applied Informatics Engineering <span class="edu-abbr">(A.Md.Kom.)</span></p>
                         <div class="edu-gpa"><i class="fas fa-star"></i> GPA 3.41 / 4.00</div>
                     </div>
                 </div>
@@ -381,30 +389,176 @@
                 <h2 class="section-title">Certifications</h2>
                 <p class="section-sub">Professional certifications and intellectual property rights.</p>
             </div>
-            <div class="cert-grid">
-                <img src="images/bnsp.jpg" alt="BNSP Certification" class="cert-img">
-                <img src="images/vsga1.jpg" alt="VSGA Certification 1" class="cert-img">
-                <img src="images/vsga2.jpg" alt="VSGA Certification 2" class="cert-img">
-                <img src="images/pensky.jpg" alt="Pensky Certification" class="cert-img">
-                <img src="images/hki1.jpg" alt="HKI Certificate 1" class="cert-img">
-                <img src="images/hki2.jpg" alt="HKI Certificate 2" class="cert-img">
-                <img src="images/gamelab.jpg" alt="Gamelab Certificate" class="cert-img">
-                <img src="images/wmk1.jpg" alt="WMK Certificate 1" class="cert-img">
-                <img src="images/wmk2.jpg" alt="WMK Certificate 2" class="cert-img">
-                <img src="images/fpc.jpg" alt="FPC Certificate" class="cert-img">
-                <img src="images/softskill1.jpg" alt="Soft Skill 1" class="cert-img">
-                <img src="images/softskill2.jpg" alt="Soft Skill 2" class="cert-img">
-                <img src="images/softskill3.jpg" alt="Soft Skill 3" class="cert-img">
-                <img src="images/softskill4.jpg" alt="Soft Skill 4" class="cert-img">
-                <img src="images/softskill5.jpg" alt="Soft Skill 5" class="cert-img">
+
+            <!-- Featured — landscape full width -->
+            <div class="cert-featured reveal">
+                <img src="images/bnsp.jpg" alt="BNSP Certification">
+                <div class="cert-featured-label">BNSP Professional Certification</div>
             </div>
+
+            <!-- HKI pair -->
+            <div class="cert-row-label reveal">Intellectual Property Rights (HKI)</div>
+            <div class="cert-pair reveal">
+                <div class="cert-pair-item"><img src="images/hki1.jpg" alt="HKI 1"></div>
+                <div class="cert-pair-item"><img src="images/hki2.jpg" alt="HKI 2"></div>
+            </div>
+
+            <!-- VSGA pair -->
+            <div class="cert-row-label reveal">VSGA Certification</div>
+            <div class="cert-pair reveal">
+                <div class="cert-pair-item"><img src="images/vsga1.jpg" alt="VSGA 1"></div>
+                <div class="cert-pair-item"><img src="images/vsga2.jpg" alt="VSGA 2"></div>
+            </div>
+
+            <!-- WMK pair -->
+            <div class="cert-row-label reveal">Wirausaha Merdeka (WMK)</div>
+            <div class="cert-pair reveal">
+                <div class="cert-pair-item"><img src="images/wmk1.jpg" alt="WMK 1"></div>
+                <div class="cert-pair-item"><img src="images/wmk2.jpg" alt="WMK 2"></div>
+            </div>
+
+            <!-- Other landscape certs -->
+            <div class="cert-row-label reveal">Other Certifications</div>
+            <div class="cert-masonry reveal">
+                <div class="cert-masonry-item">
+                    <img src="images/pensky.jpg" alt="Pensky">
+                    <span class="cert-caption">Pensky</span>
+                </div>
+                <div class="cert-masonry-item">
+                    <img src="images/gamelab.jpg" alt="Gamelab">
+                    <span class="cert-caption">Gamelab Indonesia</span>
+                </div>
+                <div class="cert-masonry-item">
+                    <img src="images/fpc.jpg" alt="FPC">
+                    <span class="cert-caption">FPC</span>
+                </div>
+            </div>
+
+            <!-- Soft skills horizontal scroll strip -->
+            <div class="cert-row-label reveal">Soft Skills</div>
+            <div class="cert-strip-wrap reveal">
+                <div class="cert-strip">
+                    <div class="cert-strip-item"><img src="images/softskill1.jpg" alt="Soft Skill 1"></div>
+                    <div class="cert-strip-item"><img src="images/softskill2.jpg" alt="Soft Skill 2"></div>
+                    <div class="cert-strip-item"><img src="images/softskill3.jpg" alt="Soft Skill 3"></div>
+                    <div class="cert-strip-item"><img src="images/softskill4.jpg" alt="Soft Skill 4"></div>
+                    <div class="cert-strip-item"><img src="images/softskill5.jpg" alt="Soft Skill 5"></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- =============================================
+         ACTIVITY GALLERY SECTION
+         ============================================= -->
+    <section class="activity section-pad" id="activity">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Moments</span>
+                <h2 class="section-title">Activity Gallery</h2>
+                <p class="section-sub">Snapshots from events, workshops, competitions, and campus life.</p>
+            </div>
+
+            <div class="gallery-filters reveal">
+                <button class="gfilter active" data-filter="all">All</button>
+                <button class="gfilter" data-filter="campus">Campus</button>
+                <button class="gfilter" data-filter="project">Project</button>
+                <button class="gfilter" data-filter="event">Event</button>
+                <button class="gfilter" data-filter="competition">Competition</button>
+            </div>
+
+            <!--
+                CARA TAMBAH FOTO:
+                Salin <div class="gcard"> di bawah, ganti src + caption + data-cat.
+                Tambah class "tall" untuk foto portrait, "wide" untuk landscape ekstra lebar.
+                data-cat: "campus" / "project" / "event" / "competition"
+            -->
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gcard tall" data-cat="campus">
+                    <img src="images/activity1.jpg" alt="Campus Activity" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Campus Life</span>
+                        <span class="gcard-cat">Campus</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="project">
+                    <img src="images/activity2.jpg" alt="Project" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Project Development</span>
+                        <span class="gcard-cat">Project</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="event">
+                    <img src="images/activity3.jpg" alt="Event" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Tech Event</span>
+                        <span class="gcard-cat">Event</span>
+                    </div>
+                </div>
+
+                <div class="gcard wide" data-cat="competition">
+                    <img src="images/activity4.jpg" alt="Competition" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Competition</span>
+                        <span class="gcard-cat">Competition</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="campus">
+                    <img src="images/activity5.jpg" alt="Campus" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Campus Activity</span>
+                        <span class="gcard-cat">Campus</span>
+                    </div>
+                </div>
+
+                <div class="gcard tall" data-cat="project">
+                    <img src="images/activity6.jpg" alt="IoT Project" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">IoT Project</span>
+                        <span class="gcard-cat">Project</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="event">
+                    <img src="images/activity7.jpg" alt="Workshop" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Workshop</span>
+                        <span class="gcard-cat">Event</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="competition">
+                    <img src="images/activity8.jpg" alt="Hackathon" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Hackathon</span>
+                        <span class="gcard-cat">Competition</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-nav prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+            <div class="lightbox-inner">
+                <img src="" alt="" id="lightboxImg">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+            <button class="lightbox-nav next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section class="contact section-pad" id="contact">
         <div class="container">
-            <div class="section-header light">
+            <div class="section-header">
                 <span class="section-label">Get in Touch</span>
                 <h2 class="section-title">Contact Me</h2>
                 <p class="section-sub">I usually respond faster on WhatsApp. Let's start a conversation!</p>
@@ -415,31 +569,19 @@
                         <div class="contact-info">
                             <div class="contact-item">
                                 <div class="cicon"><i class="fab fa-whatsapp"></i></div>
-                                <div>
-                                    <div class="citem-label">WhatsApp</div>
-                                    <div class="citem-val">+62 881-9485-228</div>
-                                </div>
+                                <div><div class="citem-label">WhatsApp</div><div class="citem-val">+62 881-9485-228</div></div>
                             </div>
                             <div class="contact-item">
                                 <div class="cicon"><i class="fas fa-envelope"></i></div>
-                                <div>
-                                    <div class="citem-label">Email</div>
-                                    <div class="citem-val">mehmedhanifalhazmi@gmail.com</div>
-                                </div>
+                                <div><div class="citem-label">Email</div><div class="citem-val">mehmedhanifalhazmi@gmail.com</div></div>
                             </div>
                             <div class="contact-item">
                                 <div class="cicon"><i class="fab fa-linkedin"></i></div>
-                                <div>
-                                    <div class="citem-label">LinkedIn</div>
-                                    <div class="citem-val">muhammad-hanif-al-hazmi</div>
-                                </div>
+                                <div><div class="citem-label">LinkedIn</div><div class="citem-val">muhammad-hanif-al-hazmi</div></div>
                             </div>
                             <div class="contact-item">
                                 <div class="cicon"><i class="fab fa-github"></i></div>
-                                <div>
-                                    <div class="citem-label">GitHub</div>
-                                    <div class="citem-val">muhammadhanifalhazmi</div>
-                                </div>
+                                <div><div class="citem-label">GitHub</div><div class="citem-val">muhammadhanifalhazmi</div></div>
                             </div>
                         </div>
                     </div>
@@ -464,7 +606,6 @@
     <footer>
         <div class="container">
             <div class="footer-inner">
-                <span class="footer-brand"><span class="brand-dot"></span>hanif.dev</span>
                 <p class="footer-copy">&copy; 2025 Muhammad Hanif Al Hazmi. All rights reserved.</p>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/"><i class="fab fa-linkedin"></i></a>
@@ -476,303 +617,22 @@
         </div>
     </footer>
 
-    <!-- Portfolio Modals (unchanged logic, improved styling via CSS) -->
-    <div id="portfolio1Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>MasBro Canteen — Online Food Delivery</h2>
-                <button class="modal-close" onclick="closeModal('portfolio1')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-role-badge"><i class="fas fa-user-tie"></i> Role: Project Manager</div>
-                <p class="modal-section-label">Mobile App</p>
-                <img src="images/masbro1.jpg" alt="MasBro Mobile App">
-                <p class="modal-section-label">Web Landing Page</p>
-                <img src="images/masbro2.jpg" alt="MasBro Web">
-                <h3>Project Overview</h3>
-                <p>I served as Project Manager for this project. The platform consists of a Web Landing Page and Mobile App. Users are divided into buyers and sellers.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>Displaying the food and beverage menu in the cafeteria</li>
-                    <li>Order food and beverages directly from the system</li>
-                    <li>Payment gateway for purchases</li>
-                    <li>Delivery of orders to the user's location</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Laravel</span>
-                    <span class="tech-badge">MySQL</span>
-                    <span class="tech-badge">Agile / JIRA</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/orgs/Project-Aplikasi-Antrean-Kantin/repositories" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Portfolio Modals -->
+    <div id="portfolio1Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>MasBro Canteen — Online Food Delivery</h2><button class="modal-close" onclick="closeModal('portfolio1')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-user-tie"></i> Role: Project Manager</div><p class="modal-section-label">Mobile App</p><img src="images/masbro1.jpg" alt="MasBro Mobile"><p class="modal-section-label">Web Landing Page</p><img src="images/masbro2.jpg" alt="MasBro Web"><h3>Project Overview</h3><p>Platform terdiri dari Web Landing Page dan Mobile App dengan kategori user: pembeli dan penjual.</p><h3>Key Features</h3><ul class="modal-list"><li>Displaying the food and beverage menu</li><li>Order food directly from the system</li><li>Payment gateway for purchases</li><li>Delivery to the user's location</li></ul><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Laravel</span><span class="tech-badge">MySQL</span><span class="tech-badge">Agile / JIRA</span></div><div class="modal-link"><a href="https://github.com/orgs/Project-Aplikasi-Antrean-Kantin/repositories" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-    <div id="portfolio2Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>UMKM Web Store</h2>
-                <button class="modal-close" onclick="closeModal('portfolio2')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-role-badge"><i class="fas fa-code"></i> Role: Front-End Developer (Internship @ Gamelab)</div>
-                <p class="modal-section-label">Product Showcase</p>
-                <img src="images/umkm1.jpg" alt="UMKM Products">
-                <p class="modal-section-label">Easy Order — Direct to WhatsApp</p>
-                <img src="images/umkm2.jpg" alt="UMKM Order">
-                <h3>Project Overview</h3>
-                <p>Main task during internship at Gamelab Indonesia. Helps increase sales of UMKM partnership products through a web showcase.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>Displaying UMKM products</li>
-                    <li>Introduction to UMKM products</li>
-                    <li>Connecting buyers and sellers directly</li>
-                    <li>Content to support product sales</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Bootstrap</span>
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-UMKM-Al-Amiri-Mushroom-Garden" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="portfolio2Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>UMKM Web Store</h2><button class="modal-close" onclick="closeModal('portfolio2')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-code"></i> Role: Front-End Developer (Internship @ Gamelab)</div><p class="modal-section-label">Product Showcase</p><img src="images/umkm1.jpg" alt="UMKM Products"><p class="modal-section-label">Easy Order — Direct to WhatsApp</p><img src="images/umkm2.jpg" alt="UMKM Order"><h3>Project Overview</h3><p>Main task during internship at Gamelab Indonesia. Helps increase UMKM sales through a web showcase.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Bootstrap</span><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-UMKM-Al-Amiri-Mushroom-Garden" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-    <div id="portfolio3Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>IoT Smart System — Melon Garden</h2>
-                <button class="modal-close" onclick="closeModal('portfolio3')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-role-badge"><i class="fas fa-certificate"></i> HKI Certified Research Project</div>
-                <p class="modal-section-label">Mobile App & System Diagram</p>
-                <img src="images/siram1.jpg" alt="Siram App">
-                <p class="modal-section-label">Hardware & Realtime Database</p>
-                <img src="images/siram2.jpg" alt="Siram Hardware">
-                <h3>Project Overview</h3>
-                <p>Smart IoT system for melon farming integrated with Firebase, Weather API, and a mobile app. Used in community service research and obtained an intellectual property rights (HKI) certificate.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>Real-time monitoring</li>
-                    <li>Control water pump remotely</li>
-                    <li>Irrigation automation</li>
-                    <li>Farm data history recording</li>
-                    <li>Plant health advice</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Firebase</span>
-                    <span class="tech-badge">Weather API</span>
-                    <span class="tech-badge">ESP32</span>
-                    <span class="tech-badge">C/C++</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/muhammadhanifalhazmi/aplikasi-siram-code-for-android" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="portfolio3Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>IoT Smart System — Melon Garden</h2><button class="modal-close" onclick="closeModal('portfolio3')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-certificate"></i> HKI Certified Research Project</div><p class="modal-section-label">Mobile App & System Diagram</p><img src="images/siram1.jpg" alt="Siram App"><p class="modal-section-label">Hardware & Realtime Database</p><img src="images/siram2.jpg" alt="Siram Hardware"><h3>Project Overview</h3><p>Smart IoT system for melon farming with Firebase, Weather API, mobile app. HKI certified.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Firebase</span><span class="tech-badge">Weather API</span><span class="tech-badge">ESP32</span><span class="tech-badge">C/C++</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/aplikasi-siram-code-for-android" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-    <div id="portfolio4Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>DiSign — Digital Signature System</h2>
-                <button class="modal-close" onclick="closeModal('portfolio4')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-section-label">Web Dashboard Admin</p>
-                <img src="images/disign1.jpg" alt="DiSign Dashboard">
-                <p class="modal-section-label">Mobile App</p>
-                <img src="images/disign2.png" alt="DiSign Mobile">
-                <h3>Project Overview</h3>
-                <p>A secure digital signature system using cryptographic technology for important documents. Consists of a centralized web admin panel and a mobile app for users.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>Digital document signature</li>
-                    <li>Secure cryptographic implementation</li>
-                    <li>Centralized administration panel</li>
-                    <li>Mobile app for user convenience</li>
-                    <li>Document versioning and audit trail</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Firebase</span>
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">MySQL</span>
-                    <span class="tech-badge">Cryptography</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/muhammadhanifalhazmi/disign" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="portfolio4Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>DiSign — Digital Signature System</h2><button class="modal-close" onclick="closeModal('portfolio4')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Web Dashboard Admin</p><img src="images/disign1.jpg" alt="DiSign Dashboard"><p class="modal-section-label">Mobile App</p><img src="images/disign2.png" alt="DiSign Mobile"><h3>Project Overview</h3><p>Secure digital signature system using cryptographic technology. Web admin panel + mobile app.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Firebase</span><span class="tech-badge">React</span><span class="tech-badge">MySQL</span><span class="tech-badge">Cryptography</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/disign" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-    <div id="portfolio5Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>GreenCast — IoT Mushroom Garden</h2>
-                <button class="modal-close" onclick="closeModal('portfolio5')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-role-badge"><i class="fas fa-certificate"></i> HKI Certified Research Project</div>
-                <p class="modal-section-label">Mobile App</p>
-                <img src="images/greencast1.png" alt="GreenCast App">
-                <p class="modal-section-label">System Diagram</p>
-                <img src="images/greencast2.jpg" alt="GreenCast Diagram">
-                <h3>Project Overview</h3>
-                <p>IoT smart system for an oyster mushroom farm integrating hardware, sensors, weather station, weather alerts, mobile app, and mushroom age detection using computer vision.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>Real-time farm monitoring</li>
-                    <li>Complete farm history data</li>
-                    <li>Integrated weather station</li>
-                    <li>Smart garden automation</li>
-                    <li>Oyster mushroom age detection via CV</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Firebase</span>
-                    <span class="tech-badge">Weather API</span>
-                    <span class="tech-badge">ESP32</span>
-                    <span class="tech-badge">C/C++</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/muhammadhanifalhazmi/Green-Cast-Smart-System-App" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="portfolio5Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>GreenCast — IoT Mushroom Garden</h2><button class="modal-close" onclick="closeModal('portfolio5')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-certificate"></i> HKI Certified Research Project</div><p class="modal-section-label">Mobile App</p><img src="images/greencast1.png" alt="GreenCast App"><p class="modal-section-label">System Diagram</p><img src="images/greencast2.jpg" alt="GreenCast Diagram"><h3>Project Overview</h3><p>IoT smart system for oyster mushroom farm with sensors, weather station, and CV-based age detection.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Firebase</span><span class="tech-badge">ESP32</span><span class="tech-badge">C/C++</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Green-Cast-Smart-System-App" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-    <div id="portfolio6Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>BIISA — Bahasa Isyarat Kita Semua</h2>
-                <button class="modal-close" onclick="closeModal('portfolio6')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-section-label">Landing Page</p>
-                <img src="images/biisa1.jpg" alt="BIISA Landing">
-                <p class="modal-section-label">Learning Page</p>
-                <img src="images/biisa2.jpg" alt="BIISA Learning">
-                <h3>Project Overview</h3>
-                <p>A learning website for sign language using international and Indonesian standards. Displays hand gestures so hearing people can learn sign language.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>User-friendly interface</li>
-                    <li>Comprehensive learning content</li>
-                    <li>Real-time interaction</li>
-                    <li>Responsive design</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Bootstrap</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-Bahasa-Isyarat-Kita-Semua--BIISA-" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="portfolio6Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>BIISA — Bahasa Isyarat Kita Semua</h2><button class="modal-close" onclick="closeModal('portfolio6')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Landing Page</p><img src="images/biisa1.jpg" alt="BIISA Landing"><p class="modal-section-label">Learning Page</p><img src="images/biisa2.jpg" alt="BIISA Learning"><h3>Project Overview</h3><p>Learning website for sign language using Indonesian and international standards.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-Bahasa-Isyarat-Kita-Semua--BIISA-" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-    <div id="portfolio7Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Buildiv — Tech Startup Website</h2>
-                <button class="modal-close" onclick="closeModal('portfolio7')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-section-label">Home Page</p>
-                <img src="images/buildiv1.jpg" alt="Buildiv Home">
-                <p class="modal-section-label">Other Content</p>
-                <img src="images/buildiv2.jpg" alt="Buildiv Content">
-                <h3>Project Overview</h3>
-                <p>A modern website for a technology startup that showcases their services and solutions.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>Professional design</li>
-                    <li>Responsive layout</li>
-                    <li>SEO optimization</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Bootstrap</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-Buildiv" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="portfolio7Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>Buildiv — Tech Startup Website</h2><button class="modal-close" onclick="closeModal('portfolio7')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Home Page</p><img src="images/buildiv1.jpg" alt="Buildiv Home"><p class="modal-section-label">Other Content</p><img src="images/buildiv2.jpg" alt="Buildiv Content"><h3>Project Overview</h3><p>Modern website for a technology startup showcasing services and solutions.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-Buildiv" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-    <div id="portfolio8Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Excelsion — EdTech Startup Website</h2>
-                <button class="modal-close" onclick="closeModal('portfolio8')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-section-label">Home Page</p>
-                <img src="images/excelsion1.jpg" alt="Excelsion Home">
-                <p class="modal-section-label">Other Content</p>
-                <img src="images/excelsion2.jpg" alt="Excelsion Content">
-                <h3>Project Overview</h3>
-                <p>A modern website for an education startup providing online learning resources and courses.</p>
-                <h3>Key Features</h3>
-                <ul class="modal-list">
-                    <li>Modern design</li>
-                    <li>Responsive layout</li>
-                    <li>User-friendly interface</li>
-                    <li>SEO optimization</li>
-                </ul>
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Bootstrap</span>
-                </div>
-                <div class="modal-link">
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-Landing-Page-Excelsion" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="portfolio8Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>Excelsion — EdTech Startup Website</h2><button class="modal-close" onclick="closeModal('portfolio8')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Home Page</p><img src="images/excelsion1.jpg" alt="Excelsion Home"><p class="modal-section-label">Other Content</p><img src="images/excelsion2.jpg" alt="Excelsion Content"><h3>Project Overview</h3><p>Modern website for an education startup providing online learning resources.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-Landing-Page-Excelsion" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
