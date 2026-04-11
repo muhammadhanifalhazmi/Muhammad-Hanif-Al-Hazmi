@@ -140,7 +140,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #F3E8FF 0%, #E0F2FE 50%, #CCFBF1 100%);
-            padding: 250px 0;
+            padding: 100px 0;
             position: relative;
             overflow: hidden;
         }
@@ -152,6 +152,7 @@
             margin-bottom: 1rem;
             color: var(--text-dark);
             animation: fadeInUp 0.8s ease-out;
+            text-align: center;
         }
 
         .hero-content p {
@@ -160,12 +161,14 @@
             margin-bottom: 2rem;
             line-height: 1.6;
             animation: fadeInUp 0.8s ease-out 0.2s both;
+            text-align: center;
         }
 
         .hero-stats {
             display: flex;
             gap: 3rem;
             margin-top: 2rem;
+            justify-content: center;
         }
 
         .stat-item {
