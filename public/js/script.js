@@ -1,201 +1,186 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-        let currentCarouselIndex = 0;
+// =============================================
+// NAVBAR SCROLL EFFECT
+// =============================================
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+});
 
-        function changeCarousel(n) {
-            const items = document.querySelectorAll('.carousel-item');
-            const dots = document.querySelectorAll('.carousel-dot');
-            currentCarouselIndex += n;
-
-            if (currentCarouselIndex >= items.length) {
-                currentCarouselIndex = 0;
-            } else if (currentCarouselIndex < 0) {
-                currentCarouselIndex = items.length - 1;
-            }
-
-            items.forEach(item => item.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            items[currentCarouselIndex].classList.add('active');
-            dots[currentCarouselIndex].classList.add('active');
-        }
-
-        function currentCarousel(n) {
-            const items = document.querySelectorAll('.carousel-item');
-            const dots = document.querySelectorAll('.carousel-dot');
-            
-            items.forEach(item => item.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            currentCarouselIndex = n;
-            items[currentCarouselIndex].classList.add('active');
-            dots[currentCarouselIndex].classList.add('active');
-        }
-
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId + 'Modal');
-            if (modal) {
-                modal.classList.add('show');
+// =============================================
+// SMOOTH SCROLL
+// =============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+            const navCollapse = document.getElementById('navbarNav');
+            if (navCollapse && navCollapse.classList.contains('show')) {
+                document.querySelector('.navbar-toggler')?.click();
             }
         }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId + 'Modal');
-            if (modal) {
-                modal.classList.remove('show');
-            }
-        }
-
-        // Close modal ketika klik di luar modal
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('show');
-            }
-        }
-
-        async function sendEmail(event) {
-            event.preventDefault();
-
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                message: document.getElementById('message').value
-            };
-
-            const messageDiv = document.getElementById('formMessage');
-
-            try {
-                const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    messageDiv.textContent = 'Pesan berhasil dikirim ke email Anda!';
-                    messageDiv.className = 'form-message success';
-                    document.getElementById('contactForm').reset();
-                    
-                    // Reset message setelah 5 detik
-                    setTimeout(() => {
-                        messageDiv.className = 'form-message';
-                    }, 5000);
-                } else {
-                    throw new Error('Gagal mengirim pesan');
-                }
-            } catch (error) {
-                messageDiv.textContent = 'Gagal mengirim pesan. Silakan coba lagi.';
-                messageDiv.className = 'form-message error';
-            }
-        }
-
-        // Smooth scroll untuk navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    
-
-        const images = document.querySelectorAll(".carousel-images img");
-const dots = document.querySelectorAll(".dot");
-const title = document.getElementById("aboutTitle");
-const desc = document.getElementById("aboutDesc");
-
-const aboutData = [
-    {
-        title: "Let's get to know me better",
-        desc: "Greetings! I'm Muhammad Hanif Al Hazmi, an Informatics Engineering graduate with a strong analytical mindset and growing passion for data-driven decision making."
-    },
-    {
-        title: "Web Development Background",
-        desc: "I have experience developing responsive web applications and turning complex ideas into intuitive digital solutions."
-    },
-    {
-        title: "Research & Innovation",
-        desc: "I conducted applied research in IoT for agriculture and Cryptography, both officially recognized with copyright certificates."
-    },
-    {
-        title: "Industry Experience",
-        desc: "During my internship as a Front-End Web Developer at Gamelab Indonesia, I worked on transforming data into engaging user experiences."
-    },
-    {
-        title: "Data Analytics Journey",
-        desc: "Currently, I’m building strong skills in Excel, Python, SQL, Statistics, and Tableau to pursue a career in Data Analytics and Business Intelligence."
-    }
-];
-
-let currentIndex = 0;
-
-function showSlide(index) {
-    images.forEach(img => img.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
-
-    images[index].classList.add("active");
-    dots[index].classList.add("active");
-
-    title.textContent = aboutData[index].title;
-    desc.textContent = aboutData[index].desc;
-
-    currentIndex = index;
-}
-
-// DOT CLICK
-dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        showSlide(index);
     });
 });
 
-// AUTO SLIDE
-setInterval(() => {
-    const nextIndex = (currentIndex + 1) % images.length;
-    showSlide(nextIndex);
-}, 6000);
+// =============================================
+// MODAL
+// =============================================
+function openModal(id) {
+    const m = document.getElementById(id + 'Modal');
+    if (m) { m.classList.add('show'); document.body.style.overflow = 'hidden'; }
+}
+function closeModal(id) {
+    const m = document.getElementById(id + 'Modal');
+    if (m) { m.classList.remove('show'); document.body.style.overflow = ''; }
+}
+window.addEventListener('click', e => {
+    if (e.target.classList.contains('modal')) {
+        e.target.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+});
+window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal.show').forEach(m => m.classList.remove('show'));
+        document.body.style.overflow = '';
+        closeLightbox();
+    }
+});
 
-/* ===== EXPERIENCE CAROUSEL ===== */
+// =============================================
+// SCROLL REVEAL
+// =============================================
+const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 80);
+            revealObs.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-let experienceIndex = 0;
+document.querySelectorAll('.reveal, .edu-item, .pcard, .skill-group, .exp-item').forEach(el => {
+    if (!el.classList.contains('reveal')) el.classList.add('reveal');
+    revealObs.observe(el);
+});
 
-const experienceItems = document.querySelectorAll(".carousel-item");
-const experienceDots = document.querySelectorAll(".carousel-dot");
+// =============================================
+// SKILL BAR ANIMATION
+// =============================================
+const skillObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.skill-fill').forEach(f => {
+                f.style.width = f.getAttribute('data-w') + '%';
+            });
+            skillObs.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skills-wrap').forEach(el => skillObs.observe(el));
 
-function showExperience(index) {
-    // looping aman
-    if (index >= experienceItems.length) experienceIndex = 0;
-    if (index < 0) experienceIndex = experienceItems.length - 1;
+// =============================================
+// ACTIVE NAV ON SCROLL
+// =============================================
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const sectionObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector(`.nav-link[href="#${entry.target.id}"]`)?.classList.add('active');
+        }
+    });
+}, { threshold: 0.4 });
+sections.forEach(s => sectionObs.observe(s));
 
-    // reset semua
-    experienceItems.forEach(item => item.classList.remove("active"));
-    experienceDots.forEach(dot => dot.classList.remove("active"));
+// =============================================
+// GALLERY FILTER + LIGHTBOX
+// =============================================
+const gfilters = document.querySelectorAll('.gfilter');
+const gcards = document.querySelectorAll('.gcard');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
 
-    // aktifkan yang dipilih
-    experienceItems[experienceIndex].classList.add("active");
-    experienceDots[experienceIndex].classList.add("active");
+let visibleCards = [];
+let lightboxIndex = 0;
+
+// Filter
+gfilters.forEach(btn => {
+    btn.addEventListener('click', () => {
+        gfilters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        gcards.forEach(card => {
+            const cat = card.getAttribute('data-cat');
+            if (filter === 'all' || cat === filter) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        updateVisibleCards();
+    });
+});
+
+function updateVisibleCards() {
+    visibleCards = [...gcards].filter(c => !c.classList.contains('hidden') && !c.classList.contains('img-error'));
+}
+updateVisibleCards();
+
+// Open lightbox on card click
+gcards.forEach(card => {
+    card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        const caption = card.querySelector('.gcard-caption')?.textContent || '';
+        if (!img || card.classList.contains('img-error')) return;
+        lightboxIndex = visibleCards.indexOf(card);
+        showLightboxImage(card);
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function showLightboxImage(card) {
+    const img = card.querySelector('img');
+    const caption = card.querySelector('.gcard-caption')?.textContent || '';
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = caption;
 }
 
-function changeCarousel(step) {
-    experienceIndex += step;
-    showExperience(experienceIndex);
+function closeLightbox() {
+    if (lightbox) {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
 }
 
-function currentCarousel(index) {
-    experienceIndex = index;
-    showExperience(experienceIndex);
-}
+document.getElementById('lightboxClose')?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 
-/* AUTO SLIDE (optional, boleh hapus kalau tidak mau) */
-setInterval(() => {
-    changeCarousel(1);
-}, 7000);
+document.getElementById('lightboxPrev')?.addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex - 1 + visibleCards.length) % visibleCards.length;
+    showLightboxImage(visibleCards[lightboxIndex]);
+});
+document.getElementById('lightboxNext')?.addEventListener('click', () => {
+    lightboxIndex = (lightboxIndex + 1) % visibleCards.length;
+    showLightboxImage(visibleCards[lightboxIndex]);
+});
 
+// Swipe support for lightbox
+let touchStartX = 0;
+lightbox?.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+lightbox?.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) {
+        if (dx < 0) {
+            lightboxIndex = (lightboxIndex + 1) % visibleCards.length;
+        } else {
+            lightboxIndex = (lightboxIndex - 1 + visibleCards.length) % visibleCards.length;
+        }
+        showLightboxImage(visibleCards[lightboxIndex]);
+    }
+});

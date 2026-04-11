@@ -6,713 +6,801 @@
     <title>Muhammad Hanif Al Hazmi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
         <div class="container">
-            <div class="social-links">
+            <div class="social-links d-none d-lg-flex">
                 <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/muhammadhanifalhazmi" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.tiktok.com/@neeeeep" title="Tiktok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/muhammadhanif_al?igsh=MTRpeTRsMGdvb213cQ==" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/628819485228?text=Hi%20Qiscus" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@neeeeep" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/muhammadhanif_al" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/628819485228" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <!--<li class="nav-item"><a class="nav-link" href="#about">About</a></li>-->
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <!--<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>-->
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#activity">Activity</a></li>
+                    <li class="nav-item"><a class="nav-link nav-cta" href="#contact">Contact</a></li>
                 </ul>
+                <div class="social-links d-flex d-lg-none mt-3">
+                    <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/muhammadhanifalhazmi" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/muhammadhanif_al" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/628819485228" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
+        <div class="hero-bg-grid"></div>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 order-2 order-lg-1">
                     <div class="hero-content">
-                        <h1>Hello Guys ! <br> Welcome to My Page</h1>
-                        <p>I am a graduate of the applied informatics engineering bachelor degree at the Electronic Engineering Polytechnic Institute of Surabaya. My expertise lies in Website Development, Mobile Apps Development, and Internet of Things. </p>
-                        <div class="hero-stats">
-                            <a href="https://wa.me/628819485228?text=Halo%20Hanif,%20saya%20ingin%20berdiskusi." target="_blank" class="wa-button" id="waButton">
-                                <i class="fab fa-whatsapp" style="width: 20px;"></i> Let's Colaboration With Me
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            Available for collaboration
+                        </div>
+                        <h1 class="hero-title">
+                            Hello, I'm<br>
+                            <span class="hero-name">Muhammad<br>Hanif Al Hazmi</span>
+                        </h1>
+                        <p class="hero-desc">Graduate of Applied Informatics Engineering at PENS. I build digital products across web, mobile, and IoT — from idea to deployment.</p>
+                        <div class="hero-tags">
+                            <span class="htag">Web Dev</span>
+                            <span class="htag">Mobile Apps</span>
+                            <span class="htag">IoT</span>
+                            <span class="htag">Flutter</span>
+                            <span class="htag">Laravel</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="https://wa.me/628819485228?text=Halo%20Hanif,%20saya%20ingin%20berdiskusi." target="_blank" class="btn-hero-main">
+                                <i class="fab fa-whatsapp"></i> Let's Collaborate
+                            </a>
+                            <a href="#portfolio" class="btn-hero-outline">
+                                View My Work <i class="fas fa-arrow-right ms-1"></i>
                             </a>
                         </div>
+                        <div class="hero-stats">
+                            <div class="hstat"><span class="hstat-num">8+</span><span class="hstat-lbl">Projects</span></div>
+                            <div class="hstat-div"></div>
+                            <div class="hstat"><span class="hstat-num">3.81</span><span class="hstat-lbl">GPA</span></div>
+                            <div class="hstat-div"></div>
+                            <div class="hstat"><span class="hstat-num">2</span><span class="hstat-lbl">HKI Cert</span></div>
+                        </div>
                     </div>
-                </div><br><br><br>
-                <div class="col-lg-6">
-                    <div class="hero-image">
-                        <img src="images/profil.jpg" alt="Muhammad Hanif Al Hazmi">
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="hero-photo-wrap">
+                        <div class="hero-photo-ring"></div>
+                        <img src="images/profil.jpg" alt="Muhammad Hanif Al Hazmi" class="hero-photo">
+                        <div class="hero-photo-card card-webdev">
+                            <i class="fas fa-code"></i> Web Developer
+                        </div>
+                        <div class="hero-photo-card card-flutter">
+                            <i class="fas fa-mobile-alt"></i> Flutter Dev
+                        </div>
+                        <div class="hero-photo-card card-iot">
+                            <i class="fas fa-microchip"></i> IoT Engineer
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
+    <!-- Portfolio -->
+    <section class="portfolio section-pad" id="portfolio">
         <div class="container">
-            <div class="section-title">
-                <h2>My Portfolio</h2>
-                <p>Collection of my professional projects and work samples.</p>
+            <div class="section-header">
+                <span class="section-label">Work</span>
+                <h2 class="section-title">My Portfolio</h2>
+                <p class="section-sub">A collection of projects spanning mobile apps, web platforms, and IoT systems.</p>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" onclick="openModal('portfolio1')">
-                    <div class="portfolio-image">
-                        <img src="images/masbro.jpg" alt="">
+                <div class="pcard" onclick="openModal('portfolio1')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FDE68A,#F59E0B)">
+                        <img src="images/masbro.jpg" alt="MasBro Canteen" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
-                    <div class="portfolio-content">
-                        <h3>MasBro Canteen</h3>
-                        <p>Online Food Delivery Paltform at Canteen PENS</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-                <div class="portfolio-item" onclick="openModal('portfolio2')">
-                    <div class="portfolio-image">
-                        <img src="images/umkm.png" alt="">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>UMKM Web Store</h3>
-                        <p>Website for UMKM to showcase and sell their products</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">Laravel</span><span class="ptag">MySQL</span></div>
+                        <h3 class="pcard-title">MasBro Canteen</h3>
+                        <p class="pcard-desc">Online food delivery platform at Canteen PENS — mobile app + web landing page.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" onclick="openModal('portfolio3')">
-                    <div class="portfolio-image">
-                        <img src="images/siram.png" alt="">
+                <div class="pcard" onclick="openModal('portfolio2')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#A7F3D0,#059669)">
+                        <img src="images/umkm.png" alt="UMKM Web Store" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
-                    <div class="portfolio-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Business intelligence platform with predictive analytics</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-                <div class="portfolio-item" onclick="openModal('portfolio4')">
-                    <div class="portfolio-image">
-                        <img src="images/disign.png" alt="">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Business intelligence platform with predictive analytics</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">Bootstrap</span></div>
+                        <h3 class="pcard-title">UMKM Web Store</h3>
+                        <p class="pcard-desc">Website for UMKM partners to showcase products and connect buyers via WhatsApp.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" onclick="openModal('portfolio5')">
-                    <div class="portfolio-image">
-                        <img src="images/greencast.png" alt="">
+                <div class="pcard" onclick="openModal('portfolio3')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#BAE6FD,#0284C7)">
+                        <img src="images/siram.png" alt="IoT Melon Garden" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
-                    <div class="portfolio-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Business intelligence platform with predictive analytics</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-                <div class="portfolio-item" onclick="openModal('portfolio6')">
-                    <div class="portfolio-image">
-                        <img src="images/biisa.jpg" alt="">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Business intelligence platform with predictive analytics</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">ESP32</span><span class="ptag">Firebase</span></div>
+                        <h3 class="pcard-title">IoT Smart Melon Garden</h3>
+                        <p class="pcard-desc">Smart IoT system for melon farming — real-time monitoring, auto-irrigation, HKI certified.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" onclick="openModal('portfolio7')">
-                    <div class="portfolio-image">
-                        <img src="images/buildiv.png" alt="">
+                <div class="pcard" onclick="openModal('portfolio4')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FECACA,#DC2626)">
+                        <img src="images/disign.png" alt="DiSign" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
-                    <div class="portfolio-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Business intelligence platform with predictive analytics</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">React</span><span class="ptag">Cryptography</span></div>
+                        <h3 class="pcard-title">DiSign — Digital Signature</h3>
+                        <p class="pcard-desc">Secure digital signature system with cryptographic tech, web admin panel + mobile app.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" onclick="openModal('portfolio8')">
-                    <div class="portfolio-image">
-                        <img src="images/excelsion.png" alt="">
+                <div class="pcard" onclick="openModal('portfolio5')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#D1FAE5,#065F46)">
+                        <img src="images/greencast.png" alt="GreenCast IoT" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
                     </div>
-                    <div class="portfolio-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Business intelligence platform with predictive analytics</p>
-                        <span class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></span>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">Flutter</span><span class="ptag">ESP32</span><span class="ptag">CV</span></div>
+                        <h3 class="pcard-title">GreenCast — Mushroom IoT</h3>
+                        <p class="pcard-desc">Smart oyster mushroom farm system with CV-based age detection and weather station.</p>
+                    </div>
+                </div>
+                <div class="pcard" onclick="openModal('portfolio6')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#E0E7FF,#4338CA)">
+                        <img src="images/biisa.jpg" alt="BIISA" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span></div>
+                        <h3 class="pcard-title">BIISA — Sign Language</h3>
+                        <p class="pcard-desc">Interactive learning website for Indonesian & international sign language.</p>
+                    </div>
+                </div>
+                <div class="pcard" onclick="openModal('portfolio7')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FEF3C7,#B45309)">
+                        <img src="images/buildiv.png" alt="Buildiv" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">Bootstrap</span><span class="ptag">SEO</span></div>
+                        <h3 class="pcard-title">Buildiv — Tech Startup</h3>
+                        <p class="pcard-desc">Modern website for a technology startup showcasing services and solutions.</p>
+                    </div>
+                </div>
+                <div class="pcard" onclick="openModal('portfolio8')">
+                    <div class="pcard-thumb" style="background:linear-gradient(135deg,#FCE7F3,#9D174D)">
+                        <img src="images/excelsion.png" alt="Excelsion" onerror="this.style.display='none'">
+                        <div class="pcard-overlay"><span>View Details <i class="fas fa-arrow-right"></i></span></div>
+                    </div>
+                    <div class="pcard-body">
+                        <div class="pcard-tags"><span class="ptag">HTML</span><span class="ptag">Bootstrap</span><span class="ptag">SEO</span></div>
+                        <h3 class="pcard-title">Excelsion — EdTech</h3>
+                        <p class="pcard-desc">Modern website for an education startup providing online learning resources.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- Portfolio Modals -->
-    <div id="portfolio1Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Online Food Delivery Platform</h2>
-                <button class="modal-close" onclick="closeModal('portfolio1')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Mobile App</p>
-                <img src="images/masbro1.jpg" alt="Web App">
-                <p>Web landing page</p>
-                <img src="images/masbro2.jpg" alt="Web App">
-                <h3>Project Overview</h3>
-                <p>I served as Project Manager for this project. The platform consists of a Web Landing Page and Mobile App. Users are divided into several categories, including buyers and sellers.</p>
-                
-                <h3>Key Features</h3>
-                <p>
-                    • Displaying the food and beverage menu in the cafeteria <br>
-                    • Order food and beverages directly from the system<br>
-                    • Performing payment gateway for purchases from users<br>
-                    • Delivery of orders to the user's location
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Laravel</span>
-                    <span class="tech-badge">MySQL</span>
-                    <span class="tech-badge">Agile Method</span>
-                    <span class="tech-badge">JIRA</span>
-                </div><br>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/orgs/Project-Aplikasi-Antrean-Kantin/repositories" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio2Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Web Showcase UMKM Products</h2>
-                <button class="modal-close" onclick="closeModal('portfolio2')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>UMKM Products</p>
-                <img src="images/umkm1.jpg" alt="Mobile App">
-                <br><br><br>
-                <p>Easy Order - Direct to WhatsApp</p>
-                <img src="images/umkm2.jpg" alt="Mobile App">
-                <h3>Project Overview</h3>
-                <p>This project was my main task during my internship at Gamelab Indonesia. Its MVP is that it can help increase sales of UMKM partnership products.</p>
-                
-                <h3>Key Features</h3>
-                <p>
-                    • Displaying UMKM products<br>
-                    • Introduction to UMKM products<br>
-                    • Connecting potential buyers and sellers directly<br>
-                    • Creating content to support product sales
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Bootstrap</span>
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">Javascript</span>
-                </div><br>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-UMKM-Al-Amiri-Mushroom-Garden" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio3Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>IoT Smart System for Melon Garde</h2>
-                <button class="modal-close" onclick="closeModal('portfolio3')">&times;</button>
-            </div>
-            <div class="modal-body">
-                 <p>Mobile App & Diagram System</p>
-                <img src="images/siram1.jpg" alt="Mobile App">
-                <br><br><br>
-                <p>Hardware & Realtime Database</p>
-                <img src="images/siram2.jpg" alt="Mobile App">
-                <h3>Project Overview</h3>
-                <p>A smart IoT system for a melon farm integrated with Firebase, Weather API, and a mobile app. It was used in community service research and successfully obtained an intellectual property rights certificate.</p>
-                
-                <h3>Key Features</h3>
-                 <p>
-                    • Real-time monitoring <br>
-                    • Control water pump from anywhere<br>
-                    • Irrigation automation<br>
-                    • Recording of farm data history<br>
-                    • Plant health advice 
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Firebase</span>
-                    <span class="tech-badge">Weather API</span>
-                    <span class="tech-badge">ESP32</span>
-                    <span class="tech-badge">C/C++</span>
-                </div><br>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/muhammadhanifalhazmi/aplikasi-siram-code-for-android" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio4Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Data Analytics Dashboard</h2>
-                <button class="modal-close" onclick="closeModal('portfolio4')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Website Dasboard Admin</p>
-                <img src="images/disign1.jpg" alt="Mobile App">
-                <br><br><br>
-                <p>Mobile App</p>
-                <img src="images/disign2.png" alt="Mobile App">
-                <h3>Project Overview</h3>
-                <p>A project to develop a secure digital signature system utilizing cryptographic technology for important documents. It consists of a centralized web-based administration panel and a mobile app for users.</p>
-                
-                <h3>Key Features</h3>
-                <p>
-                    • Digital document signature<br>
-                    • Secure cryptographic implementation<br>
-                    • Centralized administration panel<br>
-                    • Mobile app for user convenience<br>
-                    • Document versioning and audit trail
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Firebase</span>
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">MySQL</span>
-                    <span class="tech-badge">Cryptographic</span>
-                </div>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/muhammadhanifalhazmi/disign" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio5Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>IoT Smart System for Mushroom Garden</h2>
-                <button class="modal-close" onclick="closeModal('portfolio5')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Mobile App</p>
-                <img src="images/greencast1.png" alt="Mobile App">
-                <br><br><br>
-                <p>Diagram System</p>
-                <img src="images/greencast2.jpg" alt="Mobile App">
-                <h3>Project Overview</h3>
-                <p> An IoT smart system project for an oyster mushroom farm that integrates hardware, various sensors, weather stations, weather alerts, a mobile app, and other key features such as mushroom age detection using computer vision.</p>
-                
-                <h3>Key Features</h3>
-                <p>
-                    • Real-time farm monitoring<br>
-                    • Complete farm history data<br>
-                    • Integrated weather station<br>
-                    • Smart garden automation features<br>
-                    • Determining the age of oyster mushrooms
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Firebase</span>
-                    <span class="tech-badge">Weather API</span>
-                    <span class="tech-badge">ESP32</span>
-                    <span class="tech-badge">C/C++</span>
-                </div>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/muhammadhanifalhazmi/Green-Cast-Smart-System-App" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio6Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Website Bahasa Isyarat Kita Semua "BIISA"</h2>
-                <button class="modal-close" onclick="closeModal('portfolio6')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Website Landing Page</p>
-                <img src="images/biisa1.jpg" alt="Mobile App">
-                <br><br><br>
-                <p>Learning "BIISA" Page</p>
-                <img src="images/biisa2.jpg" alt="Mobile App">
-                <h3>Project Overview</h3>
-                <p>A learning website for sign language that uses international and Indonesian standards. It displays hand gestures for sign language so that hearing people can understand sign language.</p>
-                
-                <h3>Key Features</h3>
-                <p>
-                    • User-Friendly Interface<br>
-                    • Comprehensive Learning Content<br>
-                    • Real-time Interaction<br>
-                    • Data Management<br>
-                    • Responsive Design
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Bootstrap</span>
-                </div>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-Bahasa-Isyarat-Kita-Semua--BIISA-" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio7Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Website Startup Technology</h2>
-                <button class="modal-close" onclick="closeModal('portfolio7')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Home Page</p>
-                <img src="images/buildiv1.jpg" alt="Mobile App">
-                <br><br><br>
-                <p>Other Content</p>
-                <img src="images/buildiv2.jpg" alt="Mobile App">
-                <h3>Project Overview</h3>
-                <p>A modern website for a technology startup that showcases their services and solutions.</p>
-                
-                <h3>Key Features</h3>
-                <p>
-                    • Professional Design<br>
-                    • Responsive Layout<br>
-                    • Real-time Interaction<br>
-                    • Data Management<br>
-                    • SEO Optimization
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Bootstrap</span>
-                </div>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-Buildiv" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="portfolio8Modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Website Startup Education</h2>
-                <button class="modal-close" onclick="closeModal('portfolio8')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Home Page</p>
-                <img src="images/excelsion1.jpg" alt="Mobile App">
-                <br><br><br>
-                <p>Other Content</p>
-                <img src="images/excelsion2.jpg" alt="Mobile App">
-                <h3>Project Overview</h3>
-                <p>A modern website for an education startup that provides online learning resources and courses.</p>
-                
-                <h3>Key Features</h3>
-                <p>
-                    • Modern Design<br>
-                    • Responsive Layout<br>
-                    • User-Friendly Interface<br>
-                    • Data Management<br>
-                    • SEO Optimization
-                </p>
-
-                <h3>Technologies Used</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Bootstrap</span>
-                </div>
-                <div class="link-project">
-                    <br><h3>Link to Github</h3><br>
-                    <a href="https://github.com/muhammadhanifalhazmi/Website-Landing-Page-Excelsion" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Education -->
-    <section class="education" id="education" style="background-color: rgb(241, 241, 241);">
+    <!-- Skills -->
+    <section class="skills-section section-pad" id="skills">
         <div class="container">
-            <div class="section-title">
-                <h2>Education</h2>
-                <p>My educational background is in Applied Informatics Engineering.</p>
+            <div class="section-header">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Tech Skills</h2>
+                <p class="section-sub">Technologies and tools I work with regularly.</p>
             </div>
-            <div class="container">
-                <div class="main-timeline">
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer">
-                                <span class="date">
-                                    <span class="month">2024 - 2025</span>
-                                    <span class="year">1 Year</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <h5 class="title">Politeknik Elektronika Negeri Surabaya</h5>
-                            <h6>Bachelor's Degree in Informatics Engineering - (S.Tr.Kom.)</h6>
-                            <p class="description">
-                                GPA : 3.81/4.00
-                            </p>
-                        </div>
+            <div class="skills-wrap">
+                <div class="skill-group">
+                    <h4 class="skill-group-title"><i class="fas fa-mobile-alt"></i> Mobile Development</h4>
+                    <div class="skill-list">
+                        <div class="skill-item"><div class="skill-meta"><span>Flutter / Dart</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>Firebase</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
                     </div>
-                    <div class="timeline">
-                        <div class="icon"></div>
-                        <div class="date-content">
-                            <div class="date-outer">
-                                <span class="date">
-                                    <span class="month">2021 - 2024</span>
-                                    <span class="year">3 Years</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <h5 class="title">Politeknik Elektronika Negeri Surabaya</h5>
-                            <h6>Associate's Degree in Informatics Engineering - (A.Md.Kom.)</h6>
-                            <p class="description">
-                                GPA : 3.41/4.00
-                            </p>
-                        </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-title"><i class="fas fa-globe"></i> Web Development</h4>
+                    <div class="skill-list">
+                        <div class="skill-item"><div class="skill-meta"><span>Laravel / PHP</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>React / JavaScript / Tailwind</span><span>70%</span></div><div class="skill-bar"><div class="skill-fill" data-w="70"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>HTML / CSS / Bootstrap</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-title"><i class="fas fa-microchip"></i> IoT & Embedded</h4>
+                    <div class="skill-list">
+                        <div class="skill-item"><div class="skill-meta"><span>ESP32 / C++</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>Sensor Integration</span><span>78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-title"><i class="fas fa-database"></i> Database & Tools</h4>
+                    <div class="skill-list">
+                        <div class="skill-item"><div class="skill-meta"><span>MySQL</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75"></div></div></div>
+                        <div class="skill-item"><div class="skill-meta"><span>JIRA / Agile</span><span>72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72"></div></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--Certification-->
-    <br><br><br>
-    <section class="certification" id="certification">
-        <div class="container">
-            <div class="section-title">
-                <h2>Certification</h2>
-                <p>List of certifications I have obtained.</p>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/bnsp.jpg" alt="Logo BNSP" style="max-width: 100%; height: auto; width: 400px;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/vsga1.jpg" alt="Logo VSGA" style="max-width: 100%; height: auto; width: 400px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/vsga2.jpg" alt="Logo VSGA" style="max-width: 100%; height: auto; width: 400px;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/pensky.jpg" alt="Logo PENSKY" style="max-width: 100%; height: auto; width: 400px;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/hki1.jpg" alt="Logo HKI" style="max-width: 100%; height: auto; width: 400px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/hki2.jpg" alt="Logo HKI" style="max-width: 100%; height: auto; width: 400px;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/gamelab.jpg" alt="Logo GAMLAB" style="max-width: 100%; height: auto; width: 400px;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/wmk1.jpg" alt="Logo WMK" style="max-width: 100%; height: auto; width: 400px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/wmk2.jpg" alt="Logo WMK" style="max-width: 100%; height: auto; width: 400px;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/fpc.jpg" alt="Logo GAMLAB" style="max-width: 100%; height: auto; width: 400px;">
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-                <img src="images/softskill1.jpg" alt="Logo WMK" style="max-width: 100%; height: auto; width: 250px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/softskill2.jpg" alt="Logo WMK" style="max-width: 100%; height: auto; width: 250px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/softskill3.jpg" alt="Logo WMK" style="max-width: 100%; height: auto; width: 250px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/softskill4.jpg" alt="Logo WMK" style="max-width: 100%; height: auto; width: 250px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="images/softskill5.jpg" alt="Logo WMK" style="max-width: 100%; height: auto; width: 250px;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- =============================================
+         EXPERIENCE SECTION
+         ============================================= -->
+  <section class="experience section-pad" id="experience">
     <div class="container">
-        <div class="contact-card">
-            <h3>Contact Me</h3>
-            <p class="contact-desc">
-                I usually respond faster on WhatsApp.  
-                Click the button below to start a conversation.
-            </p>
+        <div class="section-header">
+            <span class="section-label">Career</span>
+            <h2 class="section-title">Work Experience</h2>
+            <p class="section-sub">Professional journey and hands-on experience in the field.</p>
+        </div>
+        <div class="exp-list">
 
-            <a 
-                href="https://wa.me/628819485228?text=Halo%20Hanif,%20saya%20ingin%20berdiskusi."
-                target="_blank"
-                class="wa-button"
-                id="waButton"
-            >
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
+            <div class="exp-item reveal">
+                <div class="exp-left">
+                    <div class="exp-logo-wrap">
+                        <img src="images/jsologo.jpg" alt="PT Sinergi Membangun Bangsa" class="exp-logo" onerror="this.style.display='none'">
+                        <div class="exp-logo-fallback">SMB</div>
+                    </div>
+                    <div class="exp-vline"></div>
+                </div>
+                <div class="exp-right">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">Research & Development Website</h3>
+                            <p class="exp-company">PT. Sinergi Membangun Bangsa</p>
+                        </div>
+                        <div class="exp-period-wrap">
+                            <span class="exp-period">Nov 2025 - Present</span>
+                            <span class="exp-type">Internship</span>
+                        </div>
+                    </div>
+                    <p class="exp-desc">
+                        Focused on managing web infrastructure and optimizing digital platform performance through in-depth research and modern technology integration.
+                    </p>
+                    <ul class="exp-points">
+                        <li>Managed website content administration via WordPress and optimized workflows using AI-based tools.</li>
+                        <li>Analyzed website performance and product research data to provide strategic marketing recommendations.</li>
+                        <li>Implemented SEO strategies for article publications to improve visibility and organic traffic.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span class="etag">WordPress</span>
+                        <span class="etag">SEO</span>
+                        <span class="etag">Data Analysis</span>
+                        <span class="etag">AI Integration</span>
+                    </div>
+                    <div class="exp-photos">
+                        <div class="exp-photo-item">
+                            <img src="images/jso1.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                        </div>
+                        <div class="exp-photo-item">
+                            <img src="images/jso2.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                        </div>
+                        <div class="exp-photo-item">
+                            <img src="images/jso3.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <span class="wa-number">
-                or send letter on my email: <strong>mehmedhanifalhazmi@gmail.com</strong>
-            </span>
+            <div class="exp-item reveal">
+                <div class="exp-left">
+                    <div class="exp-logo-wrap">
+                        <img src="images/penslogo.png" alt="Lab Big Data PENS" class="exp-logo" onerror="this.style.display='none'">
+                        <div class="exp-logo-fallback">PENS</div>
+                    </div>
+                    <div class="exp-vline"></div>
+                </div>
+                <div class="exp-right">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">Research Assistant</h3>
+                            <p class="exp-company">Lab Big Data PENS</p>
+                        </div>
+                        <div class="exp-period-wrap">
+                            <span class="exp-period">Jul 2023 - Jul 2025</span>
+                            <span class="exp-type">Research</span>
+                        </div>
+                    </div>
+                    <p class="exp-desc">
+                        Led technical execution for IoT and Digital Security research projects, resulting in scientific publications and official copyrights.
+                    </p>
+                    <ul class="exp-points">
+                        <li>Built end-to-end IoT systems (Smart Agriculture) from hardware integration to mobile interfaces.</li>
+                        <li>Developed web admin dashboards and Digital Signature systems using cryptographic methods.</li>
+                        <li>Secured 2 official Copyrights (HKI) from the Ministry of Law and Human Rights for innovative system designs.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span class="etag">IoT</span>
+                        <span class="etag">Cryptography</span>
+                        <span class="etag">Web Dashboard</span>
+                        <span class="etag">Firebase</span>
+                    </div>
+                    <div class="exp-photos">
+                        <div class="exp-photos">
+                            <div class="exp-photo-item">
+                                <img src="images/bigdata1.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/bigdata2.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/bigdata3.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-left">
+                    <div class="exp-logo-wrap">
+                        <img src="images/meikalogo.jpg" alt="Wirausaha Merdeka" class="exp-logo" onerror="this.style.display='none'">
+                        <div class="exp-logo-fallback">WM</div>
+                    </div>
+                    <div class="exp-vline"></div>
+                </div>
+                <div class="exp-right">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">Frontend Web Developer</h3>
+                            <p class="exp-company">Wirausaha Merdeka (Project BIISA)</p>
+                        </div>
+                        <div class="exp-period-wrap">
+                            <span class="exp-period">Sep 2023 - Des 2023</span>
+                            <span class="exp-type">Program</span>
+                        </div>
+                    </div>
+                    <p class="exp-desc">
+                        Transformed inclusive education concepts into functional digital platforms ready for the market.
+                    </p>
+                    <ul class="exp-points">
+                        <li>Designed UI/UX for the "BIISA" platform using Figma with a focus on web accessibility.</li>
+                        <li>Developed responsive web interfaces using Bootstrap and the Agile Scrum methodology.</li>
+                        <li>Awarded "Best Pitching Team," which served as the foundation for establishing Meika Studio.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span class="etag">Figma</span>
+                        <span class="etag">Bootstrap</span>
+                        <span class="etag">Agile Scrum</span>
+                        <span class="etag">UI/UX</span>
+                    </div>
+                    <div class="exp-photos">
+                         <div class="exp-photos">
+                            <div class="exp-photo-item">
+                                <img src="images/meika1.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/meika2.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/meika3.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/meika4.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/meika5.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-left">
+                    <div class="exp-logo-wrap">
+                        <img src="images/gamelablogo.png" alt="Gamelab Indonesia" class="exp-logo" onerror="this.style.display='none'">
+                        <div class="exp-logo-fallback">GL</div>
+                    </div>
+                    <div class="exp-vline"></div>
+                </div>
+                <div class="exp-right">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">Frontend Web Developer Intern</h3>
+                            <p class="exp-company">PT. Educa Sisfomedia (Gamelab.id)</p>
+                        </div>
+                        <div class="exp-period-wrap">
+                            <span class="exp-period">Feb 2023 - Jul 2023</span>
+                            <span class="exp-type">Internship</span>
+                        </div>
+                    </div>
+                    <p class="exp-desc">
+                        Collaborated with MSME partners to build professional digital profiles through precise frontend development.
+                    </p>
+                    <ul class="exp-points">
+                        <li>Translated client business requirements into intuitive UI designs (Wireframe to High-Fidelity).</li>
+                        <li>Implemented designs into frontend code using Bootstrap for lightweight and responsive websites.</li>
+                        <li>Recognized as 2x Weekly Best Web Design, outperforming other internship participants.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span class="etag">HTML/CSS</span>
+                        <span class="etag">Bootstrap</span>
+                        <span class="etag">JavaScript</span>
+                        <span class="etag">User Flow</span>
+                    </div>
+                    <div class="exp-photos">
+                        <div class="exp-photos">
+                            <div class="exp-photo-item">
+                                <img src="images/gamelab1.jpg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/gamelab2.jpg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/gamelab3.jpg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-left">
+                    <div class="exp-logo-wrap">
+                        <img src="images/foodlablogo.jpg" alt="FoodLab PENS" class="exp-logo" onerror="this.style.display='none'">
+                        <div class="exp-logo-fallback">FL</div>
+                    </div>
+                    <div class="exp-vline"></div>
+                </div>
+                <div class="exp-right">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">Product Manager Intern</h3>
+                            <p class="exp-company">FoodLab PENS</p>
+                        </div>
+                        <div class="exp-period-wrap">
+                            <span class="exp-period">Feb 2023 - Jul 2023</span>
+                            <span class="exp-type">Internship</span>
+                        </div>
+                    </div>
+                    <p class="exp-desc">
+                        Managed the development lifecycle of digital products for the campus cafeteria using structured workflows.
+                    </p>
+                    <ul class="exp-points">
+                        <li>Led development team management using Agile Scrum (Daily Stand-ups & Sprint Planning).</li>
+                        <li>Managed Product Backlog and prioritized features based on user requirement research.</li>
+                        <li>Ensured quality deliverables through regular user testing at the end of each iteration.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span class="etag">Agile Scrum</span>
+                        <span class="etag">Product Backlog</span>
+                        <span class="etag">User Testing</span>
+                        <span class="etag">Leadership</span>
+                    </div>
+                    <div class="exp-photos">
+                        <div class="exp-photos">
+                            <div class="exp-photo-item">
+                                <img src="images/foodlab1.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/foodlab2.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/foodlab3.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                            <div class="exp-photo-item">
+                                <img src="images/foodlab4.jpeg" alt="SMB Work Activity" onerror="this.parentElement.style.display='none'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
+    <!-- Education -->
+    <section class="education section-pad" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Background</span>
+                <h2 class="section-title">Education</h2>
+                <p class="section-sub">Applied Informatics Engineering at PENS Surabaya.</p>
+            </div>
+            <div class="edu-timeline">
+                <div class="edu-item reveal">
+                    <div class="edu-icon">D4</div>
+                    <div class="edu-card">
+                        <div class="edu-period">2024 — 2025</div>
+                        <h3 class="edu-school">Politeknik Elektronika Negeri Surabaya</h3>
+                        <p class="edu-degree">Bachelor's Degree (D4) — Applied Informatics Engineering <span class="edu-abbr">(S.Tr.Kom.)</span></p>
+                        <div class="edu-gpa"><i class="fas fa-star"></i> GPA 3.81 / 4.00</div>
+                    </div>
+                </div>
+                <div class="edu-item reveal">
+                    <div class="edu-icon">D3</div>
+                    <div class="edu-card">
+                        <div class="edu-period">2021 — 2024</div>
+                        <h3 class="edu-school">Politeknik Elektronika Negeri Surabaya</h3>
+                        <p class="edu-degree">Associate's Degree (D3) — Applied Informatics Engineering <span class="edu-abbr">(A.Md.Kom.)</span></p>
+                        <div class="edu-gpa"><i class="fas fa-star"></i> GPA 3.41 / 4.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification -->
+    <section class="certification section-pad" id="certification">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Credentials</span>
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-sub">Professional certifications and intellectual property rights.</p>
+            </div>
+
+            <!-- Featured — landscape full width -->
+            <div class="cert-featured reveal">
+                <img src="images/bnsp.jpg" alt="BNSP Certification">
+                <div class="cert-featured-label">BNSP Professional Certification</div>
+            </div>
+
+            <!-- HKI pair -->
+            <div class="cert-row-label reveal">Intellectual Property Rights (HKI)</div>
+            <div class="cert-pair reveal">
+                <div class="cert-pair-item"><img src="images/hki1.jpg" alt="HKI 1"></div>
+                <div class="cert-pair-item"><img src="images/hki2.jpg" alt="HKI 2"></div>
+            </div>
+
+            <!-- VSGA pair -->
+            <div class="cert-row-label reveal">VSGA Certification</div>
+            <div class="cert-pair reveal">
+                <div class="cert-pair-item"><img src="images/vsga1.jpg" alt="VSGA 1"></div>
+                <div class="cert-pair-item"><img src="images/vsga2.jpg" alt="VSGA 2"></div>
+            </div>
+
+            <!-- WMK pair -->
+            <div class="cert-row-label reveal">Wirausaha Merdeka (WMK)</div>
+            <div class="cert-pair reveal">
+                <div class="cert-pair-item"><img src="images/wmk1.jpg" alt="WMK 1"></div>
+                <div class="cert-pair-item"><img src="images/wmk2.jpg" alt="WMK 2"></div>
+            </div>
+
+            <!-- Other landscape certs -->
+            <div class="cert-row-label reveal">Other Certifications</div>
+            <div class="cert-masonry reveal">
+                <div class="cert-masonry-item">
+                    <img src="images/pensky.jpg" alt="Pensky">
+                    <span class="cert-caption">Pensky</span>
+                </div>
+                <div class="cert-masonry-item">
+                    <img src="images/gamelab.jpg" alt="Gamelab">
+                    <span class="cert-caption">Gamelab Indonesia</span>
+                </div>
+                <div class="cert-masonry-item">
+                    <img src="images/fpc.jpg" alt="FPC">
+                    <span class="cert-caption">FPC</span>
+                </div>
+            </div>
+
+            <!-- Soft skills horizontal scroll strip -->
+            <div class="cert-row-label reveal">Soft Skills</div>
+            <div class="cert-strip-wrap reveal">
+                <div class="cert-strip">
+                    <div class="cert-strip-item"><img src="images/softskill1.jpg" alt="Soft Skill 1"></div>
+                    <div class="cert-strip-item"><img src="images/softskill2.jpg" alt="Soft Skill 2"></div>
+                    <div class="cert-strip-item"><img src="images/softskill3.jpg" alt="Soft Skill 3"></div>
+                    <div class="cert-strip-item"><img src="images/softskill4.jpg" alt="Soft Skill 4"></div>
+                    <div class="cert-strip-item"><img src="images/softskill5.jpg" alt="Soft Skill 5"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============================================
+         ACTIVITY GALLERY SECTION
+         ============================================= -->
+    <section class="activity section-pad" id="activity">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Moments</span>
+                <h2 class="section-title">Activity Gallery</h2>
+                <p class="section-sub">Snapshots from events, workshops, competitions, and campus life.</p>
+            </div>
+
+            <div class="gallery-filters reveal">
+                <button class="gfilter active" data-filter="all">All</button>
+                <button class="gfilter" data-filter="campus">Campus</button>
+                <button class="gfilter" data-filter="project">Project</button>
+                <button class="gfilter" data-filter="event">Event</button>
+                <button class="gfilter" data-filter="competition">Competition</button>
+            </div>
+
+            <!--
+                CARA TAMBAH FOTO:
+                Salin <div class="gcard"> di bawah, ganti src + caption + data-cat.
+                Tambah class "tall" untuk foto portrait, "wide" untuk landscape ekstra lebar.
+                data-cat: "campus" / "project" / "event" / "competition"
+            -->
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gcard tall" data-cat="campus">
+                    <img src="images/activity1.jpeg" alt="Campus Activity" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Campus Life</span>
+                        <span class="gcard-cat">Campus</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="project">
+                    <img src="images/activity2.jpeg" alt="Project" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Project Development</span>
+                        <span class="gcard-cat">Project</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="event">
+                    <img src="images/activity3.jpeg" alt="Event" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Tech Event</span>
+                        <span class="gcard-cat">Event</span>
+                    </div>
+                </div>
+
+                <div class="gcard wide" data-cat="competition">
+                    <img src="images/activity4.jpeg" alt="Competition" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Competition</span>
+                        <span class="gcard-cat">Competition</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="campus">
+                    <img src="images/activity5.jpeg" alt="Campus" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Campus Activity</span>
+                        <span class="gcard-cat">Campus</span>
+                    </div>
+                </div>
+
+                <div class="gcard tall" data-cat="project">
+                    <img src="images/activity6.jpeg" alt="IoT Project" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">IoT Project</span>
+                        <span class="gcard-cat">Project</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="event">
+                    <img src="images/activity7.jpeg" alt="Workshop" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Workshop</span>
+                        <span class="gcard-cat">Event</span>
+                    </div>
+                </div>
+
+                <div class="gcard" data-cat="campus">
+                    <img src="images/activity8.jpeg" alt="Hackathon" onerror="this.parentElement.classList.add('img-error')">
+                    <div class="gcard-overlay">
+                        <span class="gcard-caption">Friendship</span>
+                        <span class="gcard-cat">Campus</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-nav prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+            <div class="lightbox-inner">
+                <img src="" alt="" id="lightboxImg">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+            <button class="lightbox-nav next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section-pad" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-sub">I usually respond faster on WhatsApp. Let's start a conversation!</p>
+            </div>
+            <div class="contact-card">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="cicon"><i class="fab fa-whatsapp"></i></div>
+                                <div><div class="citem-label">WhatsApp</div><div class="citem-val">+62 881-9485-228</div></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="cicon"><i class="fas fa-envelope"></i></div>
+                                <div><div class="citem-label">Email</div><div class="citem-val">mehmedhanifalhazmi@gmail.com</div></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="cicon"><i class="fab fa-linkedin"></i></div>
+                                <div><div class="citem-label">LinkedIn</div><div class="citem-val">muhammad-hanif-al-hazmi</div></div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="cicon"><i class="fab fa-github"></i></div>
+                                <div><div class="citem-label">GitHub</div><div class="citem-val">muhammadhanifalhazmi</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <p class="contact-tagline">Ready to build something amazing together?</p>
+                        <a href="https://wa.me/628819485228?text=Halo%20Hanif,%20saya%20ingin%20berdiskusi." target="_blank" class="btn-wa">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                        <div class="contact-social">
+                            <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/muhammadhanifalhazmi"><i class="fab fa-github"></i></a>
+                            <a href="https://www.tiktok.com/@neeeeep"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/muhammadhanif_al"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-bottom">
-                <div class="social-links-bottom">
-                <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/muhammadhanifalhazmi" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.tiktok.com/@neeeeep" title="Tiktok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/muhammadhanif_al?igsh=MTRpeTRsMGdvb213cQ==" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/628819485228?text=Hi%20Qiscus" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-                <p>&copy; 2025 Muhammad Hanif Al Hazmi. All rights reserved.</p>
+            <div class="footer-inner">
+                <p class="footer-copy">&copy; 2025 Muhammad Hanif Al Hazmi. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/muhammad-hanif-al-hazmi/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/muhammadhanifalhazmi"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/muhammadhanif_al"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/628819485228"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-     <script>
-        let currentCarouselIndex = 0;
+    <!-- Portfolio Modals -->
+    <div id="portfolio1Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>MasBro Canteen — Online Food Delivery</h2><button class="modal-close" onclick="closeModal('portfolio1')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-user-tie"></i> Role: Project Manager</div><p class="modal-section-label">Mobile App</p><img src="images/masbro1.jpg" alt="MasBro Mobile"><p class="modal-section-label">Web Landing Page</p><img src="images/masbro2.jpg" alt="MasBro Web"><h3>Project Overview</h3><p>Platform terdiri dari Web Landing Page dan Mobile App dengan kategori user: pembeli dan penjual.</p><h3>Key Features</h3><ul class="modal-list"><li>Displaying the food and beverage menu</li><li>Order food directly from the system</li><li>Payment gateway for purchases</li><li>Delivery to the user's location</li></ul><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Laravel</span><span class="tech-badge">MySQL</span><span class="tech-badge">Agile / JIRA</span></div><div class="modal-link"><a href="https://github.com/orgs/Project-Aplikasi-Antrean-Kantin/repositories" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-        function changeCarousel(n) {
-            const items = document.querySelectorAll('.carousel-item');
-            const dots = document.querySelectorAll('.carousel-dot');
-            currentCarouselIndex += n;
+    <div id="portfolio2Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>UMKM Web Store</h2><button class="modal-close" onclick="closeModal('portfolio2')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-code"></i> Role: Front-End Developer (Internship @ Gamelab)</div><p class="modal-section-label">Product Showcase</p><img src="images/umkm1.jpg" alt="UMKM Products"><p class="modal-section-label">Easy Order — Direct to WhatsApp</p><img src="images/umkm2.jpg" alt="UMKM Order"><h3>Project Overview</h3><p>Main task during internship at Gamelab Indonesia. Helps increase UMKM sales through a web showcase.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Bootstrap</span><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-UMKM-Al-Amiri-Mushroom-Garden" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-            if (currentCarouselIndex >= items.length) {
-                currentCarouselIndex = 0;
-            } else if (currentCarouselIndex < 0) {
-                currentCarouselIndex = items.length - 1;
-            }
+    <div id="portfolio3Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>IoT Smart System — Melon Garden</h2><button class="modal-close" onclick="closeModal('portfolio3')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-certificate"></i> HKI Certified Research Project</div><p class="modal-section-label">Mobile App & System Diagram</p><img src="images/siram1.jpg" alt="Siram App"><p class="modal-section-label">Hardware & Realtime Database</p><img src="images/siram2.jpg" alt="Siram Hardware"><h3>Project Overview</h3><p>Smart IoT system for melon farming with Firebase, Weather API, mobile app. HKI certified.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Firebase</span><span class="tech-badge">Weather API</span><span class="tech-badge">ESP32</span><span class="tech-badge">C/C++</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/aplikasi-siram-code-for-android" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-            items.forEach(item => item.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
+    <div id="portfolio4Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>DiSign — Digital Signature System</h2><button class="modal-close" onclick="closeModal('portfolio4')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Web Dashboard Admin</p><img src="images/disign1.jpg" alt="DiSign Dashboard"><p class="modal-section-label">Mobile App</p><img src="images/disign2.png" alt="DiSign Mobile"><h3>Project Overview</h3><p>Secure digital signature system using cryptographic technology. Web admin panel + mobile app.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Firebase</span><span class="tech-badge">React</span><span class="tech-badge">MySQL</span><span class="tech-badge">Cryptography</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/disign" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-            items[currentCarouselIndex].classList.add('active');
-            dots[currentCarouselIndex].classList.add('active');
-        }
+    <div id="portfolio5Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>GreenCast — IoT Mushroom Garden</h2><button class="modal-close" onclick="closeModal('portfolio5')">&times;</button></div><div class="modal-body"><div class="modal-role-badge"><i class="fas fa-certificate"></i> HKI Certified Research Project</div><p class="modal-section-label">Mobile App</p><img src="images/greencast1.png" alt="GreenCast App"><p class="modal-section-label">System Diagram</p><img src="images/greencast2.jpg" alt="GreenCast Diagram"><h3>Project Overview</h3><p>IoT smart system for oyster mushroom farm with sensors, weather station, and CV-based age detection.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">Flutter</span><span class="tech-badge">Firebase</span><span class="tech-badge">ESP32</span><span class="tech-badge">C/C++</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Green-Cast-Smart-System-App" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-        function currentCarousel(n) {
-            const items = document.querySelectorAll('.carousel-item');
-            const dots = document.querySelectorAll('.carousel-dot');
-            
-            items.forEach(item => item.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
+    <div id="portfolio6Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>BIISA — Bahasa Isyarat Kita Semua</h2><button class="modal-close" onclick="closeModal('portfolio6')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Landing Page</p><img src="images/biisa1.jpg" alt="BIISA Landing"><p class="modal-section-label">Learning Page</p><img src="images/biisa2.jpg" alt="BIISA Learning"><h3>Project Overview</h3><p>Learning website for sign language using Indonesian and international standards.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-Bahasa-Isyarat-Kita-Semua--BIISA-" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-            currentCarouselIndex = n;
-            items[currentCarouselIndex].classList.add('active');
-            dots[currentCarouselIndex].classList.add('active');
-        }
+    <div id="portfolio7Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>Buildiv — Tech Startup Website</h2><button class="modal-close" onclick="closeModal('portfolio7')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Home Page</p><img src="images/buildiv1.jpg" alt="Buildiv Home"><p class="modal-section-label">Other Content</p><img src="images/buildiv2.jpg" alt="Buildiv Content"><h3>Project Overview</h3><p>Modern website for a technology startup showcasing services and solutions.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-Buildiv" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId + 'Modal');
-            if (modal) {
-                modal.classList.add('show');
-            }
-        }
+    <div id="portfolio8Modal" class="modal"><div class="modal-content"><div class="modal-header"><h2>Excelsion — EdTech Startup Website</h2><button class="modal-close" onclick="closeModal('portfolio8')">&times;</button></div><div class="modal-body"><p class="modal-section-label">Home Page</p><img src="images/excelsion1.jpg" alt="Excelsion Home"><p class="modal-section-label">Other Content</p><img src="images/excelsion2.jpg" alt="Excelsion Content"><h3>Project Overview</h3><p>Modern website for an education startup providing online learning resources.</p><h3>Technologies Used</h3><div class="tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span></div><div class="modal-link"><a href="https://github.com/muhammadhanifalhazmi/Website-Landing-Page-Excelsion" target="_blank"><i class="fab fa-github"></i> View on GitHub</a></div></div></div></div>
 
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId + 'Modal');
-            if (modal) {
-                modal.classList.remove('show');
-            }
-        }
-
-        // Close modal ketika klik di luar modal
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('show');
-            }
-        }
-
-        async function sendEmail(event) {
-            event.preventDefault();
-
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                message: document.getElementById('message').value
-            };
-
-            const messageDiv = document.getElementById('formMessage');
-
-            try {
-                const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    messageDiv.textContent = 'Pesan berhasil dikirim ke email Anda!';
-                    messageDiv.className = 'form-message success';
-                    document.getElementById('contactForm').reset();
-                    
-                    // Reset message setelah 5 detik
-                    setTimeout(() => {
-                        messageDiv.className = 'form-message';
-                    }, 5000);
-                } else {
-                    throw new Error('Gagal mengirim pesan');
-                }
-            } catch (error) {
-                messageDiv.textContent = 'Gagal mengirim pesan. Silakan coba lagi.';
-                messageDiv.className = 'form-message error';
-            }
-        }
-
-        // Smooth scroll untuk navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
-        </script>
-
-    <!-- Bootstrap JS (WAJIB DI LUAR SCRIPT) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+    <script src="js/script.js"></script>
 </body>
 </html>
